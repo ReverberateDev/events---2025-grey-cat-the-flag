@@ -1,0 +1,1197 @@
+[*] Target Binary: ./finals/dist-aircon/aircon
+
+./finals/dist-aircon/aircon: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=f5810ee9310970c252be67eb2306e1a8fc7267db, for GNU/Linux 3.2.0, not stripped
+
+[+] Checksec:
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH	Symbols		FORTIFY	Fortified	Fortifiable	FILE
+[32mFull RELRO   [m   [32mCanary found   [m   [32mNX enabled [m   [32mPIE enabled  [m   [32mNo RPATH [m  [32mNo RUNPATH [m  [31m59 Symbols	[m  [31mNo[m	0		2		./finals/dist-aircon/aircon
+
+[+] ELF Header:
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Position-Independent Executable file)
+  Machine:                           Advanced Micro Devices X86-64
+  Version:                           0x1
+  Entry point address:               0x11a0
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          14936 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         13
+  Size of section headers:           64 (bytes)
+  Number of section headers:         31
+  Section header string table index: 30
+
+[+] Section Headers:
+There are 31 section headers, starting at offset 0x3a58:
+
+Section Headers:
+  [Nr] Name              Type             Address           Offset
+       Size              EntSize          Flags  Link  Info  Align
+  [ 0]                   NULL             0000000000000000  00000000
+       0000000000000000  0000000000000000           0     0     0
+  [ 1] .interp           PROGBITS         0000000000000318  00000318
+       000000000000001c  0000000000000000   A       0     0     1
+  [ 2] .note.gnu.pr[...] NOTE             0000000000000338  00000338
+       0000000000000030  0000000000000000   A       0     0     8
+  [ 3] .note.gnu.bu[...] NOTE             0000000000000368  00000368
+       0000000000000024  0000000000000000   A       0     0     4
+  [ 4] .note.ABI-tag     NOTE             000000000000038c  0000038c
+       0000000000000020  0000000000000000   A       0     0     4
+  [ 5] .gnu.hash         GNU_HASH         00000000000003b0  000003b0
+       0000000000000034  0000000000000000   A       6     0     8
+  [ 6] .dynsym           DYNSYM           00000000000003e8  000003e8
+       00000000000001e0  0000000000000018   A       7     1     8
+  [ 7] .dynstr           STRTAB           00000000000005c8  000005c8
+       0000000000000107  0000000000000000   A       0     0     1
+  [ 8] .gnu.version      VERSYM           00000000000006d0  000006d0
+       0000000000000028  0000000000000002   A       6     0     2
+  [ 9] .gnu.version_r    VERNEED          00000000000006f8  000006f8
+       0000000000000050  0000000000000000   A       7     1     8
+  [10] .rela.dyn         RELA             0000000000000748  00000748
+       0000000000000108  0000000000000018   A       6     0     8
+  [11] .rela.plt         RELA             0000000000000850  00000850
+       0000000000000108  0000000000000018  AI       6    24     8
+  [12] .init             PROGBITS         0000000000001000  00001000
+       000000000000001b  0000000000000000  AX       0     0     4
+  [13] .plt              PROGBITS         0000000000001020  00001020
+       00000000000000c0  0000000000000010  AX       0     0     16
+  [14] .plt.got          PROGBITS         00000000000010e0  000010e0
+       0000000000000010  0000000000000010  AX       0     0     16
+  [15] .plt.sec          PROGBITS         00000000000010f0  000010f0
+       00000000000000b0  0000000000000010  AX       0     0     16
+  [16] .text             PROGBITS         00000000000011a0  000011a0
+       00000000000006a9  0000000000000000  AX       0     0     16
+  [17] .fini             PROGBITS         000000000000184c  0000184c
+       000000000000000d  0000000000000000  AX       0     0     4
+  [18] .rodata           PROGBITS         0000000000002000  00002000
+       00000000000002da  0000000000000000   A       0     0     8
+  [19] .eh_frame_hdr     PROGBITS         00000000000022dc  000022dc
+       0000000000000074  0000000000000000   A       0     0     4
+  [20] .eh_frame         PROGBITS         0000000000002350  00002350
+       00000000000001a4  0000000000000000   A       0     0     8
+  [21] .init_array       INIT_ARRAY       0000000000003d68  00002d68
+       0000000000000008  0000000000000008  WA       0     0     8
+  [22] .fini_array       FINI_ARRAY       0000000000003d70  00002d70
+       0000000000000008  0000000000000008  WA       0     0     8
+  [23] .dynamic          DYNAMIC          0000000000003d78  00002d78
+       00000000000001f0  0000000000000010  WA       7     0     8
+  [24] .got              PROGBITS         0000000000003f68  00002f68
+       0000000000000098  0000000000000008  WA       0     0     8
+  [25] .data             PROGBITS         0000000000004000  00003000
+       0000000000000010  0000000000000000  WA       0     0     8
+  [26] .bss              NOBITS           0000000000004020  00003010
+       00000000000000a8  0000000000000000  WA       0     0     32
+  [27] .comment          PROGBITS         0000000000000000  00003010
+       000000000000002b  0000000000000001  MS       0     0     1
+  [28] .symtab           SYMTAB           0000000000000000  00003040
+       0000000000000588  0000000000000018          29    18     8
+  [29] .strtab           STRTAB           0000000000000000  000035c8
+       0000000000000374  0000000000000000           0     0     1
+  [30] .shstrtab         STRTAB           0000000000000000  0000393c
+       000000000000011a  0000000000000000           0     0     1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), l (large), p (processor specific)
+
+[+] Program Headers:
+
+Elf file type is DYN (Position-Independent Executable file)
+Entry point 0x11a0
+There are 13 program headers, starting at offset 64
+
+Program Headers:
+  Type           Offset             VirtAddr           PhysAddr
+                 FileSiz            MemSiz              Flags  Align
+  PHDR           0x0000000000000040 0x0000000000000040 0x0000000000000040
+                 0x00000000000002d8 0x00000000000002d8  R      0x8
+  INTERP         0x0000000000000318 0x0000000000000318 0x0000000000000318
+                 0x000000000000001c 0x000000000000001c  R      0x1
+      [Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]
+  LOAD           0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x0000000000000958 0x0000000000000958  R      0x1000
+  LOAD           0x0000000000001000 0x0000000000001000 0x0000000000001000
+                 0x0000000000000859 0x0000000000000859  R E    0x1000
+  LOAD           0x0000000000002000 0x0000000000002000 0x0000000000002000
+                 0x00000000000004f4 0x00000000000004f4  R      0x1000
+  LOAD           0x0000000000002d68 0x0000000000003d68 0x0000000000003d68
+                 0x00000000000002a8 0x0000000000000360  RW     0x1000
+  DYNAMIC        0x0000000000002d78 0x0000000000003d78 0x0000000000003d78
+                 0x00000000000001f0 0x00000000000001f0  RW     0x8
+  NOTE           0x0000000000000338 0x0000000000000338 0x0000000000000338
+                 0x0000000000000030 0x0000000000000030  R      0x8
+  NOTE           0x0000000000000368 0x0000000000000368 0x0000000000000368
+                 0x0000000000000044 0x0000000000000044  R      0x4
+  GNU_PROPERTY   0x0000000000000338 0x0000000000000338 0x0000000000000338
+                 0x0000000000000030 0x0000000000000030  R      0x8
+  GNU_EH_FRAME   0x00000000000022dc 0x00000000000022dc 0x00000000000022dc
+                 0x0000000000000074 0x0000000000000074  R      0x4
+  GNU_STACK      0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x0000000000000000 0x0000000000000000  RW     0x10
+  GNU_RELRO      0x0000000000002d68 0x0000000000003d68 0x0000000000003d68
+                 0x0000000000000298 0x0000000000000298  R      0x1
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     
+   01     .interp 
+   02     .interp .note.gnu.property .note.gnu.build-id .note.ABI-tag .gnu.hash .dynsym .dynstr .gnu.version .gnu.version_r .rela.dyn .rela.plt 
+   03     .init .plt .plt.got .plt.sec .text .fini 
+   04     .rodata .eh_frame_hdr .eh_frame 
+   05     .init_array .fini_array .dynamic .got .data .bss 
+   06     .dynamic 
+   07     .note.gnu.property 
+   08     .note.gnu.build-id .note.ABI-tag 
+   09     .note.gnu.property 
+   10     .eh_frame_hdr 
+   11     
+   12     .init_array .fini_array .dynamic .got 
+
+[+] Symbol Table:
+
+Symbol table '.dynsym' contains 20 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND _[...]@GLIBC_2.34 (2)
+     2: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterT[...]
+     3: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND puts@GLIBC_2.2.5 (3)
+     4: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __[...]@GLIBC_2.4 (4)
+     5: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBC_2.2.5 (3)
+     6: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBC_2.2.5 (3)
+     7: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND close@GLIBC_2.2.5 (3)
+     8: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND read@GLIBC_2.2.5 (3)
+     9: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBC_2.2.5 (3)
+    10: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+    11: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND open@GLIBC_2.2.5 (3)
+    12: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBC_2.2.5 (3)
+    13: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __[...]@GLIBC_2.7 (5)
+    14: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND exit@GLIBC_2.2.5 (3)
+    15: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMC[...]
+    16: 0000000000004020     8 OBJECT  GLOBAL DEFAULT   26 [...]@GLIBC_2.2.5 (3)
+    17: 0000000000000000     0 FUNC    WEAK   DEFAULT  UND [...]@GLIBC_2.2.5 (3)
+    18: 0000000000004030     8 OBJECT  GLOBAL DEFAULT   26 stdin@GLIBC_2.2.5 (3)
+    19: 0000000000004040     8 OBJECT  GLOBAL DEFAULT   26 [...]@GLIBC_2.2.5 (3)
+
+Symbol table '.symtab' contains 59 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS Scrt1.o
+     2: 000000000000038c    32 OBJECT  LOCAL  DEFAULT    4 __abi_tag
+     3: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+     4: 00000000000011d0     0 FUNC    LOCAL  DEFAULT   16 deregister_tm_clones
+     5: 0000000000001200     0 FUNC    LOCAL  DEFAULT   16 register_tm_clones
+     6: 0000000000001240     0 FUNC    LOCAL  DEFAULT   16 __do_global_dtors_aux
+     7: 0000000000004048     1 OBJECT  LOCAL  DEFAULT   26 completed.0
+     8: 0000000000003d70     0 OBJECT  LOCAL  DEFAULT   22 __do_global_dtor[...]
+     9: 0000000000001280     0 FUNC    LOCAL  DEFAULT   16 frame_dummy
+    10: 0000000000003d68     0 OBJECT  LOCAL  DEFAULT   21 __frame_dummy_in[...]
+    11: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS aircon.c
+    12: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+    13: 00000000000024f0     0 OBJECT  LOCAL  DEFAULT   20 __FRAME_END__
+    14: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS 
+    15: 0000000000003d78     0 OBJECT  LOCAL  DEFAULT   23 _DYNAMIC
+    16: 00000000000022dc     0 NOTYPE  LOCAL  DEFAULT   19 __GNU_EH_FRAME_HDR
+    17: 0000000000003f68     0 OBJECT  LOCAL  DEFAULT   24 _GLOBAL_OFFSET_TABLE_
+    18: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __libc_start_mai[...]
+    19: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterT[...]
+    20: 0000000000004020     8 OBJECT  GLOBAL DEFAULT   26 stdout@GLIBC_2.2.5
+    21: 0000000000004000     0 NOTYPE  WEAK   DEFAULT   25 data_start
+    22: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND puts@GLIBC_2.2.5
+    23: 0000000000001329    56 FUNC    GLOBAL DEFAULT   16 display_menu
+    24: 0000000000004030     8 OBJECT  GLOBAL DEFAULT   26 stdin@GLIBC_2.2.5
+    25: 0000000000001469   326 FUNC    GLOBAL DEFAULT   16 change_aircon_temp
+    26: 0000000000004010     0 NOTYPE  GLOBAL DEFAULT   25 _edata
+    27: 000000000000184c     0 FUNC    GLOBAL HIDDEN    17 _fini
+    28: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __stack_chk_fail[...]
+    29: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND setbuf@GLIBC_2.2.5
+    30: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND printf@GLIBC_2.2.5
+    31: 0000000000001636   335 FUNC    GLOBAL DEFAULT   16 cat_flag
+    32: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND close@GLIBC_2.2.5
+    33: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND read@GLIBC_2.2.5
+    34: 0000000000004000     0 NOTYPE  GLOBAL DEFAULT   25 __data_start
+    35: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND getchar@GLIBC_2.2.5
+    36: 00000000000040a0    40 OBJECT  GLOBAL DEFAULT   26 AIRCON_ACTUAL_TEMP
+    37: 0000000000001361   103 FUNC    GLOBAL DEFAULT   16 validate_inputs
+    38: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+    39: 0000000000004008     0 OBJECT  GLOBAL HIDDEN    25 __dso_handle
+    40: 0000000000002000     4 OBJECT  GLOBAL DEFAULT   18 _IO_stdin_used
+    41: 00000000000040c8     0 NOTYPE  GLOBAL DEFAULT   26 _end
+    42: 00000000000011a0    38 FUNC    GLOBAL DEFAULT   16 _start
+    43: 0000000000004060    40 OBJECT  GLOBAL DEFAULT   26 AIRCON_REMOTE_TEMP
+    44: 0000000000004010     0 NOTYPE  GLOBAL DEFAULT   26 __bss_start
+    45: 0000000000001785   196 FUNC    GLOBAL DEFAULT   16 main
+    46: 00000000000015af   135 FUNC    GLOBAL DEFAULT   16 view_aircon_temps
+    47: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND open@GLIBC_2.2.5
+    48: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND perror@GLIBC_2.2.5
+    49: 00000000000012d0    89 FUNC    GLOBAL DEFAULT   16 setup_aircon
+    50: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __isoc99_scanf@G[...]
+    51: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND exit@GLIBC_2.2.5
+    52: 0000000000004010     0 OBJECT  GLOBAL HIDDEN    25 __TMC_END__
+    53: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMC[...]
+    54: 0000000000000000     0 FUNC    WEAK   DEFAULT  UND __cxa_finalize@G[...]
+    55: 0000000000001000     0 FUNC    GLOBAL HIDDEN    12 _init
+    56: 0000000000001289    71 FUNC    GLOBAL DEFAULT   16 setup
+    57: 00000000000013c8   161 FUNC    GLOBAL DEFAULT   16 aircon_has_same_temps
+    58: 0000000000004040     8 OBJECT  GLOBAL DEFAULT   26 stderr@GLIBC_2.2.5
+
+[+] Relocations:
+
+Relocation section '.rela.dyn' at offset 0x748 contains 11 entries:
+  Offset          Info           Type           Sym. Value    Sym. Name + Addend
+000000003d68  000000000008 R_X86_64_RELATIVE                    1280
+000000003d70  000000000008 R_X86_64_RELATIVE                    1240
+000000004008  000000000008 R_X86_64_RELATIVE                    4008
+000000003fd8  000100000006 R_X86_64_GLOB_DAT 0000000000000000 __libc_start_main@GLIBC_2.34 + 0
+000000003fe0  000200000006 R_X86_64_GLOB_DAT 0000000000000000 _ITM_deregisterTM[...] + 0
+000000003fe8  000a00000006 R_X86_64_GLOB_DAT 0000000000000000 __gmon_start__ + 0
+000000003ff0  000f00000006 R_X86_64_GLOB_DAT 0000000000000000 _ITM_registerTMCl[...] + 0
+000000003ff8  001100000006 R_X86_64_GLOB_DAT 0000000000000000 __cxa_finalize@GLIBC_2.2.5 + 0
+000000004020  001000000005 R_X86_64_COPY     0000000000004020 stdout@GLIBC_2.2.5 + 0
+000000004030  001200000005 R_X86_64_COPY     0000000000004030 stdin@GLIBC_2.2.5 + 0
+000000004040  001300000005 R_X86_64_COPY     0000000000004040 stderr@GLIBC_2.2.5 + 0
+
+Relocation section '.rela.plt' at offset 0x850 contains 11 entries:
+  Offset          Info           Type           Sym. Value    Sym. Name + Addend
+000000003f80  000300000007 R_X86_64_JUMP_SLO 0000000000000000 puts@GLIBC_2.2.5 + 0
+000000003f88  000400000007 R_X86_64_JUMP_SLO 0000000000000000 __stack_chk_fail@GLIBC_2.4 + 0
+000000003f90  000500000007 R_X86_64_JUMP_SLO 0000000000000000 setbuf@GLIBC_2.2.5 + 0
+000000003f98  000600000007 R_X86_64_JUMP_SLO 0000000000000000 printf@GLIBC_2.2.5 + 0
+000000003fa0  000700000007 R_X86_64_JUMP_SLO 0000000000000000 close@GLIBC_2.2.5 + 0
+000000003fa8  000800000007 R_X86_64_JUMP_SLO 0000000000000000 read@GLIBC_2.2.5 + 0
+000000003fb0  000900000007 R_X86_64_JUMP_SLO 0000000000000000 getchar@GLIBC_2.2.5 + 0
+000000003fb8  000b00000007 R_X86_64_JUMP_SLO 0000000000000000 open@GLIBC_2.2.5 + 0
+000000003fc0  000c00000007 R_X86_64_JUMP_SLO 0000000000000000 perror@GLIBC_2.2.5 + 0
+000000003fc8  000d00000007 R_X86_64_JUMP_SLO 0000000000000000 __isoc99_scanf@GLIBC_2.7 + 0
+000000003fd0  000e00000007 R_X86_64_JUMP_SLO 0000000000000000 exit@GLIBC_2.2.5 + 0
+
+[+] Static Symbols:
+000000000000038c r __abi_tag
+00000000000040a0 B AIRCON_ACTUAL_TEMP
+00000000000013c8 T aircon_has_same_temps
+0000000000004060 B AIRCON_REMOTE_TEMP
+0000000000004010 B __bss_start
+0000000000001636 T cat_flag
+0000000000001469 T change_aircon_temp
+                 U close@GLIBC_2.2.5
+0000000000004048 b completed.0
+                 w __cxa_finalize@GLIBC_2.2.5
+0000000000004000 D __data_start
+0000000000004000 W data_start
+00000000000011d0 t deregister_tm_clones
+0000000000001329 T display_menu
+0000000000001240 t __do_global_dtors_aux
+0000000000003d70 d __do_global_dtors_aux_fini_array_entry
+0000000000004008 D __dso_handle
+0000000000003d78 d _DYNAMIC
+0000000000004010 D _edata
+00000000000040c8 B _end
+                 U exit@GLIBC_2.2.5
+000000000000184c T _fini
+0000000000001280 t frame_dummy
+0000000000003d68 d __frame_dummy_init_array_entry
+00000000000024f0 r __FRAME_END__
+                 U getchar@GLIBC_2.2.5
+0000000000003f68 d _GLOBAL_OFFSET_TABLE_
+                 w __gmon_start__
+00000000000022dc r __GNU_EH_FRAME_HDR
+0000000000001000 T _init
+0000000000002000 R _IO_stdin_used
+                 U __isoc99_scanf@GLIBC_2.7
+                 w _ITM_deregisterTMCloneTable
+                 w _ITM_registerTMCloneTable
+                 U __libc_start_main@GLIBC_2.34
+0000000000001785 T main
+                 U open@GLIBC_2.2.5
+                 U perror@GLIBC_2.2.5
+                 U printf@GLIBC_2.2.5
+                 U puts@GLIBC_2.2.5
+                 U read@GLIBC_2.2.5
+0000000000001200 t register_tm_clones
+                 U setbuf@GLIBC_2.2.5
+0000000000001289 T setup
+00000000000012d0 T setup_aircon
+                 U __stack_chk_fail@GLIBC_2.4
+00000000000011a0 T _start
+0000000000004040 B stderr@GLIBC_2.2.5
+0000000000004030 B stdin@GLIBC_2.2.5
+0000000000004020 B stdout@GLIBC_2.2.5
+0000000000004010 D __TMC_END__
+0000000000001361 T validate_inputs
+00000000000015af T view_aircon_temps
+
+[+] Dynamic Symbols:
+                 U close@GLIBC_2.2.5
+                 w __cxa_finalize@GLIBC_2.2.5
+                 U exit@GLIBC_2.2.5
+                 U getchar@GLIBC_2.2.5
+                 w __gmon_start__
+                 U __isoc99_scanf@GLIBC_2.7
+                 w _ITM_deregisterTMCloneTable
+                 w _ITM_registerTMCloneTable
+                 U __libc_start_main@GLIBC_2.34
+                 U open@GLIBC_2.2.5
+                 U perror@GLIBC_2.2.5
+                 U printf@GLIBC_2.2.5
+                 U puts@GLIBC_2.2.5
+                 U read@GLIBC_2.2.5
+                 U setbuf@GLIBC_2.2.5
+                 U __stack_chk_fail@GLIBC_2.4
+0000000000004040 B stderr@GLIBC_2.2.5
+0000000000004030 B stdin@GLIBC_2.2.5
+0000000000004020 B stdout@GLIBC_2.2.5
+
+[+] Strings (length ≥ 5):
+/lib64/ld-linux-x86-64.so.2
+__cxa_finalize
+__libc_start_main
+getchar
+stdout
+close
+stdin
+__isoc99_scanf
+stderr
+setbuf
+perror
+__stack_chk_fail
+printf
+libc.so.6
+GLIBC_2.7
+GLIBC_2.4
+GLIBC_2.2.5
+GLIBC_2.34
+_ITM_deregisterTMCloneTable
+__gmon_start__
+_ITM_registerTMCloneTable
+1. Change air-con temp
+2. View air-con temps
+3. Get flag
+Error: Your input air-con remote ID doesn't exist!
+Error: Your input temperature is too cold/hot!
+Checking that all air-con temperatures are different ...
+Error: Different air-cons have the same temperature displayed! I'm kicking u out!
+Successfully updated air-con temperature!
+Which air-con remote to use: 
+What temperature to set to: 
+Changing temperature on remote ... 
+Updating temperature of air-con ...
+[ID %d] Remote Temp: %d, Actual Temp: %d
+Error: Not all air-cons are set to 25 degree celsius! I'm kicking u out!
+flag.txt
+Failed to open flag.txt
+Failed to read flag.txt
+Flag: %s
+:*3$"
+GCC: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+Scrt1.o
+__abi_tag
+crtstuff.c
+deregister_tm_clones
+__do_global_dtors_aux
+completed.0
+__do_global_dtors_aux_fini_array_entry
+frame_dummy
+__frame_dummy_init_array_entry
+aircon.c
+__FRAME_END__
+_DYNAMIC
+__GNU_EH_FRAME_HDR
+_GLOBAL_OFFSET_TABLE_
+__libc_start_main@GLIBC_2.34
+_ITM_deregisterTMCloneTable
+stdout@GLIBC_2.2.5
+puts@GLIBC_2.2.5
+display_menu
+stdin@GLIBC_2.2.5
+change_aircon_temp
+_edata
+_fini
+__stack_chk_fail@GLIBC_2.4
+setbuf@GLIBC_2.2.5
+printf@GLIBC_2.2.5
+cat_flag
+close@GLIBC_2.2.5
+read@GLIBC_2.2.5
+__data_start
+getchar@GLIBC_2.2.5
+AIRCON_ACTUAL_TEMP
+validate_inputs
+__gmon_start__
+__dso_handle
+_IO_stdin_used
+AIRCON_REMOTE_TEMP
+__bss_start
+view_aircon_temps
+open@GLIBC_2.2.5
+perror@GLIBC_2.2.5
+setup_aircon
+__isoc99_scanf@GLIBC_2.7
+exit@GLIBC_2.2.5
+__TMC_END__
+_ITM_registerTMCloneTable
+__cxa_finalize@GLIBC_2.2.5
+_init
+setup
+aircon_has_same_temps
+stderr@GLIBC_2.2.5
+.symtab
+.strtab
+.shstrtab
+.interp
+.note.gnu.property
+.note.gnu.build-id
+.note.ABI-tag
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.plt.got
+.plt.sec
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.dynamic
+.data
+.comment
+
+[+] Strings with '/bin':
+
+[+] Disassembly (.text, Intel syntax):
+
+./finals/dist-aircon/aircon:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000001000 <_init>:
+    1000:	f3 0f 1e fa          	endbr64
+    1004:	48 83 ec 08          	sub    rsp,0x8
+    1008:	48 8b 05 d9 2f 00 00 	mov    rax,QWORD PTR [rip+0x2fd9]        # 3fe8 <__gmon_start__@Base>
+    100f:	48 85 c0             	test   rax,rax
+    1012:	74 02                	je     1016 <_init+0x16>
+    1014:	ff d0                	call   rax
+    1016:	48 83 c4 08          	add    rsp,0x8
+    101a:	c3                   	ret
+
+Disassembly of section .plt:
+
+0000000000001020 <.plt>:
+    1020:	ff 35 4a 2f 00 00    	push   QWORD PTR [rip+0x2f4a]        # 3f70 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	f2 ff 25 4b 2f 00 00 	bnd jmp QWORD PTR [rip+0x2f4b]        # 3f78 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102d:	0f 1f 00             	nop    DWORD PTR [rax]
+    1030:	f3 0f 1e fa          	endbr64
+    1034:	68 00 00 00 00       	push   0x0
+    1039:	f2 e9 e1 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    103f:	90                   	nop
+    1040:	f3 0f 1e fa          	endbr64
+    1044:	68 01 00 00 00       	push   0x1
+    1049:	f2 e9 d1 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    104f:	90                   	nop
+    1050:	f3 0f 1e fa          	endbr64
+    1054:	68 02 00 00 00       	push   0x2
+    1059:	f2 e9 c1 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    105f:	90                   	nop
+    1060:	f3 0f 1e fa          	endbr64
+    1064:	68 03 00 00 00       	push   0x3
+    1069:	f2 e9 b1 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    106f:	90                   	nop
+    1070:	f3 0f 1e fa          	endbr64
+    1074:	68 04 00 00 00       	push   0x4
+    1079:	f2 e9 a1 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    107f:	90                   	nop
+    1080:	f3 0f 1e fa          	endbr64
+    1084:	68 05 00 00 00       	push   0x5
+    1089:	f2 e9 91 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    108f:	90                   	nop
+    1090:	f3 0f 1e fa          	endbr64
+    1094:	68 06 00 00 00       	push   0x6
+    1099:	f2 e9 81 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    109f:	90                   	nop
+    10a0:	f3 0f 1e fa          	endbr64
+    10a4:	68 07 00 00 00       	push   0x7
+    10a9:	f2 e9 71 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    10af:	90                   	nop
+    10b0:	f3 0f 1e fa          	endbr64
+    10b4:	68 08 00 00 00       	push   0x8
+    10b9:	f2 e9 61 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    10bf:	90                   	nop
+    10c0:	f3 0f 1e fa          	endbr64
+    10c4:	68 09 00 00 00       	push   0x9
+    10c9:	f2 e9 51 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    10cf:	90                   	nop
+    10d0:	f3 0f 1e fa          	endbr64
+    10d4:	68 0a 00 00 00       	push   0xa
+    10d9:	f2 e9 41 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    10df:	90                   	nop
+
+Disassembly of section .plt.got:
+
+00000000000010e0 <__cxa_finalize@plt>:
+    10e0:	f3 0f 1e fa          	endbr64
+    10e4:	f2 ff 25 0d 2f 00 00 	bnd jmp QWORD PTR [rip+0x2f0d]        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    10eb:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+Disassembly of section .plt.sec:
+
+00000000000010f0 <puts@plt>:
+    10f0:	f3 0f 1e fa          	endbr64
+    10f4:	f2 ff 25 85 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e85]        # 3f80 <puts@GLIBC_2.2.5>
+    10fb:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001100 <__stack_chk_fail@plt>:
+    1100:	f3 0f 1e fa          	endbr64
+    1104:	f2 ff 25 7d 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e7d]        # 3f88 <__stack_chk_fail@GLIBC_2.4>
+    110b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001110 <setbuf@plt>:
+    1110:	f3 0f 1e fa          	endbr64
+    1114:	f2 ff 25 75 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e75]        # 3f90 <setbuf@GLIBC_2.2.5>
+    111b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001120 <printf@plt>:
+    1120:	f3 0f 1e fa          	endbr64
+    1124:	f2 ff 25 6d 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e6d]        # 3f98 <printf@GLIBC_2.2.5>
+    112b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001130 <close@plt>:
+    1130:	f3 0f 1e fa          	endbr64
+    1134:	f2 ff 25 65 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e65]        # 3fa0 <close@GLIBC_2.2.5>
+    113b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001140 <read@plt>:
+    1140:	f3 0f 1e fa          	endbr64
+    1144:	f2 ff 25 5d 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e5d]        # 3fa8 <read@GLIBC_2.2.5>
+    114b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001150 <getchar@plt>:
+    1150:	f3 0f 1e fa          	endbr64
+    1154:	f2 ff 25 55 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e55]        # 3fb0 <getchar@GLIBC_2.2.5>
+    115b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001160 <open@plt>:
+    1160:	f3 0f 1e fa          	endbr64
+    1164:	f2 ff 25 4d 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e4d]        # 3fb8 <open@GLIBC_2.2.5>
+    116b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001170 <perror@plt>:
+    1170:	f3 0f 1e fa          	endbr64
+    1174:	f2 ff 25 45 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e45]        # 3fc0 <perror@GLIBC_2.2.5>
+    117b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001180 <__isoc99_scanf@plt>:
+    1180:	f3 0f 1e fa          	endbr64
+    1184:	f2 ff 25 3d 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e3d]        # 3fc8 <__isoc99_scanf@GLIBC_2.7>
+    118b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001190 <exit@plt>:
+    1190:	f3 0f 1e fa          	endbr64
+    1194:	f2 ff 25 35 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e35]        # 3fd0 <exit@GLIBC_2.2.5>
+    119b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+Disassembly of section .text:
+
+00000000000011a0 <_start>:
+    11a0:	f3 0f 1e fa          	endbr64
+    11a4:	31 ed                	xor    ebp,ebp
+    11a6:	49 89 d1             	mov    r9,rdx
+    11a9:	5e                   	pop    rsi
+    11aa:	48 89 e2             	mov    rdx,rsp
+    11ad:	48 83 e4 f0          	and    rsp,0xfffffffffffffff0
+    11b1:	50                   	push   rax
+    11b2:	54                   	push   rsp
+    11b3:	45 31 c0             	xor    r8d,r8d
+    11b6:	31 c9                	xor    ecx,ecx
+    11b8:	48 8d 3d c6 05 00 00 	lea    rdi,[rip+0x5c6]        # 1785 <main>
+    11bf:	ff 15 13 2e 00 00    	call   QWORD PTR [rip+0x2e13]        # 3fd8 <__libc_start_main@GLIBC_2.34>
+    11c5:	f4                   	hlt
+    11c6:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+    11cd:	00 00 00 
+
+00000000000011d0 <deregister_tm_clones>:
+    11d0:	48 8d 3d 39 2e 00 00 	lea    rdi,[rip+0x2e39]        # 4010 <__TMC_END__>
+    11d7:	48 8d 05 32 2e 00 00 	lea    rax,[rip+0x2e32]        # 4010 <__TMC_END__>
+    11de:	48 39 f8             	cmp    rax,rdi
+    11e1:	74 15                	je     11f8 <deregister_tm_clones+0x28>
+    11e3:	48 8b 05 f6 2d 00 00 	mov    rax,QWORD PTR [rip+0x2df6]        # 3fe0 <_ITM_deregisterTMCloneTable@Base>
+    11ea:	48 85 c0             	test   rax,rax
+    11ed:	74 09                	je     11f8 <deregister_tm_clones+0x28>
+    11ef:	ff e0                	jmp    rax
+    11f1:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+    11f8:	c3                   	ret
+    11f9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+
+0000000000001200 <register_tm_clones>:
+    1200:	48 8d 3d 09 2e 00 00 	lea    rdi,[rip+0x2e09]        # 4010 <__TMC_END__>
+    1207:	48 8d 35 02 2e 00 00 	lea    rsi,[rip+0x2e02]        # 4010 <__TMC_END__>
+    120e:	48 29 fe             	sub    rsi,rdi
+    1211:	48 89 f0             	mov    rax,rsi
+    1214:	48 c1 ee 3f          	shr    rsi,0x3f
+    1218:	48 c1 f8 03          	sar    rax,0x3
+    121c:	48 01 c6             	add    rsi,rax
+    121f:	48 d1 fe             	sar    rsi,1
+    1222:	74 14                	je     1238 <register_tm_clones+0x38>
+    1224:	48 8b 05 c5 2d 00 00 	mov    rax,QWORD PTR [rip+0x2dc5]        # 3ff0 <_ITM_registerTMCloneTable@Base>
+    122b:	48 85 c0             	test   rax,rax
+    122e:	74 08                	je     1238 <register_tm_clones+0x38>
+    1230:	ff e0                	jmp    rax
+    1232:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+    1238:	c3                   	ret
+    1239:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+
+0000000000001240 <__do_global_dtors_aux>:
+    1240:	f3 0f 1e fa          	endbr64
+    1244:	80 3d fd 2d 00 00 00 	cmp    BYTE PTR [rip+0x2dfd],0x0        # 4048 <completed.0>
+    124b:	75 2b                	jne    1278 <__do_global_dtors_aux+0x38>
+    124d:	55                   	push   rbp
+    124e:	48 83 3d a2 2d 00 00 	cmp    QWORD PTR [rip+0x2da2],0x0        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    1255:	00 
+    1256:	48 89 e5             	mov    rbp,rsp
+    1259:	74 0c                	je     1267 <__do_global_dtors_aux+0x27>
+    125b:	48 8b 3d a6 2d 00 00 	mov    rdi,QWORD PTR [rip+0x2da6]        # 4008 <__dso_handle>
+    1262:	e8 79 fe ff ff       	call   10e0 <__cxa_finalize@plt>
+    1267:	e8 64 ff ff ff       	call   11d0 <deregister_tm_clones>
+    126c:	c6 05 d5 2d 00 00 01 	mov    BYTE PTR [rip+0x2dd5],0x1        # 4048 <completed.0>
+    1273:	5d                   	pop    rbp
+    1274:	c3                   	ret
+    1275:	0f 1f 00             	nop    DWORD PTR [rax]
+    1278:	c3                   	ret
+    1279:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+
+0000000000001280 <frame_dummy>:
+    1280:	f3 0f 1e fa          	endbr64
+    1284:	e9 77 ff ff ff       	jmp    1200 <register_tm_clones>
+
+0000000000001289 <setup>:
+    1289:	f3 0f 1e fa          	endbr64
+    128d:	55                   	push   rbp
+    128e:	48 89 e5             	mov    rbp,rsp
+    1291:	48 8b 05 98 2d 00 00 	mov    rax,QWORD PTR [rip+0x2d98]        # 4030 <stdin@GLIBC_2.2.5>
+    1298:	be 00 00 00 00       	mov    esi,0x0
+    129d:	48 89 c7             	mov    rdi,rax
+    12a0:	e8 6b fe ff ff       	call   1110 <setbuf@plt>
+    12a5:	48 8b 05 74 2d 00 00 	mov    rax,QWORD PTR [rip+0x2d74]        # 4020 <stdout@GLIBC_2.2.5>
+    12ac:	be 00 00 00 00       	mov    esi,0x0
+    12b1:	48 89 c7             	mov    rdi,rax
+    12b4:	e8 57 fe ff ff       	call   1110 <setbuf@plt>
+    12b9:	48 8b 05 80 2d 00 00 	mov    rax,QWORD PTR [rip+0x2d80]        # 4040 <stderr@GLIBC_2.2.5>
+    12c0:	be 00 00 00 00       	mov    esi,0x0
+    12c5:	48 89 c7             	mov    rdi,rax
+    12c8:	e8 43 fe ff ff       	call   1110 <setbuf@plt>
+    12cd:	90                   	nop
+    12ce:	5d                   	pop    rbp
+    12cf:	c3                   	ret
+
+00000000000012d0 <setup_aircon>:
+    12d0:	f3 0f 1e fa          	endbr64
+    12d4:	55                   	push   rbp
+    12d5:	48 89 e5             	mov    rbp,rsp
+    12d8:	c7 45 fc 00 00 00 00 	mov    DWORD PTR [rbp-0x4],0x0
+    12df:	eb 3e                	jmp    131f <setup_aircon+0x4f>
+    12e1:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    12e4:	8d 48 14             	lea    ecx,[rax+0x14]
+    12e7:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    12ea:	48 98                	cdqe
+    12ec:	48 8d 14 85 00 00 00 	lea    rdx,[rax*4+0x0]
+    12f3:	00 
+    12f4:	48 8d 05 65 2d 00 00 	lea    rax,[rip+0x2d65]        # 4060 <AIRCON_REMOTE_TEMP>
+    12fb:	89 0c 02             	mov    DWORD PTR [rdx+rax*1],ecx
+    12fe:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    1301:	8d 48 14             	lea    ecx,[rax+0x14]
+    1304:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    1307:	48 98                	cdqe
+    1309:	48 8d 14 85 00 00 00 	lea    rdx,[rax*4+0x0]
+    1310:	00 
+    1311:	48 8d 05 88 2d 00 00 	lea    rax,[rip+0x2d88]        # 40a0 <AIRCON_ACTUAL_TEMP>
+    1318:	89 0c 02             	mov    DWORD PTR [rdx+rax*1],ecx
+    131b:	83 45 fc 01          	add    DWORD PTR [rbp-0x4],0x1
+    131f:	83 7d fc 09          	cmp    DWORD PTR [rbp-0x4],0x9
+    1323:	7e bc                	jle    12e1 <setup_aircon+0x11>
+    1325:	90                   	nop
+    1326:	90                   	nop
+    1327:	5d                   	pop    rbp
+    1328:	c3                   	ret
+
+0000000000001329 <display_menu>:
+    1329:	f3 0f 1e fa          	endbr64
+    132d:	55                   	push   rbp
+    132e:	48 89 e5             	mov    rbp,rsp
+    1331:	48 8d 05 d0 0c 00 00 	lea    rax,[rip+0xcd0]        # 2008 <_IO_stdin_used+0x8>
+    1338:	48 89 c7             	mov    rdi,rax
+    133b:	e8 b0 fd ff ff       	call   10f0 <puts@plt>
+    1340:	48 8d 05 d8 0c 00 00 	lea    rax,[rip+0xcd8]        # 201f <_IO_stdin_used+0x1f>
+    1347:	48 89 c7             	mov    rdi,rax
+    134a:	e8 a1 fd ff ff       	call   10f0 <puts@plt>
+    134f:	48 8d 05 df 0c 00 00 	lea    rax,[rip+0xcdf]        # 2035 <_IO_stdin_used+0x35>
+    1356:	48 89 c7             	mov    rdi,rax
+    1359:	e8 92 fd ff ff       	call   10f0 <puts@plt>
+    135e:	90                   	nop
+    135f:	5d                   	pop    rbp
+    1360:	c3                   	ret
+
+0000000000001361 <validate_inputs>:
+    1361:	f3 0f 1e fa          	endbr64
+    1365:	55                   	push   rbp
+    1366:	48 89 e5             	mov    rbp,rsp
+    1369:	48 83 ec 10          	sub    rsp,0x10
+    136d:	89 fa                	mov    edx,edi
+    136f:	89 f0                	mov    eax,esi
+    1371:	66 89 55 fc          	mov    WORD PTR [rbp-0x4],dx
+    1375:	66 89 45 f8          	mov    WORD PTR [rbp-0x8],ax
+    1379:	66 83 7d fc 00       	cmp    WORD PTR [rbp-0x4],0x0
+    137e:	78 07                	js     1387 <validate_inputs+0x26>
+    1380:	66 83 7d fc 09       	cmp    WORD PTR [rbp-0x4],0x9
+    1385:	7e 16                	jle    139d <validate_inputs+0x3c>
+    1387:	48 8d 05 ba 0c 00 00 	lea    rax,[rip+0xcba]        # 2048 <_IO_stdin_used+0x48>
+    138e:	48 89 c7             	mov    rdi,rax
+    1391:	e8 5a fd ff ff       	call   10f0 <puts@plt>
+    1396:	b8 00 00 00 00       	mov    eax,0x0
+    139b:	eb 29                	jmp    13c6 <validate_inputs+0x65>
+    139d:	66 83 7d f8 13       	cmp    WORD PTR [rbp-0x8],0x13
+    13a2:	7e 07                	jle    13ab <validate_inputs+0x4a>
+    13a4:	66 83 7d f8 1d       	cmp    WORD PTR [rbp-0x8],0x1d
+    13a9:	7e 16                	jle    13c1 <validate_inputs+0x60>
+    13ab:	48 8d 05 ce 0c 00 00 	lea    rax,[rip+0xcce]        # 2080 <_IO_stdin_used+0x80>
+    13b2:	48 89 c7             	mov    rdi,rax
+    13b5:	e8 36 fd ff ff       	call   10f0 <puts@plt>
+    13ba:	b8 00 00 00 00       	mov    eax,0x0
+    13bf:	eb 05                	jmp    13c6 <validate_inputs+0x65>
+    13c1:	b8 01 00 00 00       	mov    eax,0x1
+    13c6:	c9                   	leave
+    13c7:	c3                   	ret
+
+00000000000013c8 <aircon_has_same_temps>:
+    13c8:	f3 0f 1e fa          	endbr64
+    13cc:	55                   	push   rbp
+    13cd:	48 89 e5             	mov    rbp,rsp
+    13d0:	48 83 ec 10          	sub    rsp,0x10
+    13d4:	48 8d 05 dd 0c 00 00 	lea    rax,[rip+0xcdd]        # 20b8 <_IO_stdin_used+0xb8>
+    13db:	48 89 c7             	mov    rdi,rax
+    13de:	e8 0d fd ff ff       	call   10f0 <puts@plt>
+    13e3:	c7 45 f8 00 00 00 00 	mov    DWORD PTR [rbp-0x8],0x0
+    13ea:	eb 61                	jmp    144d <aircon_has_same_temps+0x85>
+    13ec:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+    13ef:	83 c0 01             	add    eax,0x1
+    13f2:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+    13f5:	eb 4c                	jmp    1443 <aircon_has_same_temps+0x7b>
+    13f7:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+    13fa:	48 98                	cdqe
+    13fc:	48 8d 14 85 00 00 00 	lea    rdx,[rax*4+0x0]
+    1403:	00 
+    1404:	48 8d 05 55 2c 00 00 	lea    rax,[rip+0x2c55]        # 4060 <AIRCON_REMOTE_TEMP>
+    140b:	8b 14 02             	mov    edx,DWORD PTR [rdx+rax*1]
+    140e:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    1411:	48 98                	cdqe
+    1413:	48 8d 0c 85 00 00 00 	lea    rcx,[rax*4+0x0]
+    141a:	00 
+    141b:	48 8d 05 3e 2c 00 00 	lea    rax,[rip+0x2c3e]        # 4060 <AIRCON_REMOTE_TEMP>
+    1422:	8b 04 01             	mov    eax,DWORD PTR [rcx+rax*1]
+    1425:	39 c2                	cmp    edx,eax
+    1427:	75 16                	jne    143f <aircon_has_same_temps+0x77>
+    1429:	48 8d 05 c8 0c 00 00 	lea    rax,[rip+0xcc8]        # 20f8 <_IO_stdin_used+0xf8>
+    1430:	48 89 c7             	mov    rdi,rax
+    1433:	e8 b8 fc ff ff       	call   10f0 <puts@plt>
+    1438:	b8 01 00 00 00       	mov    eax,0x1
+    143d:	eb 28                	jmp    1467 <aircon_has_same_temps+0x9f>
+    143f:	83 45 fc 01          	add    DWORD PTR [rbp-0x4],0x1
+    1443:	83 7d fc 09          	cmp    DWORD PTR [rbp-0x4],0x9
+    1447:	7e ae                	jle    13f7 <aircon_has_same_temps+0x2f>
+    1449:	83 45 f8 01          	add    DWORD PTR [rbp-0x8],0x1
+    144d:	83 7d f8 09          	cmp    DWORD PTR [rbp-0x8],0x9
+    1451:	7e 99                	jle    13ec <aircon_has_same_temps+0x24>
+    1453:	48 8d 05 f6 0c 00 00 	lea    rax,[rip+0xcf6]        # 2150 <_IO_stdin_used+0x150>
+    145a:	48 89 c7             	mov    rdi,rax
+    145d:	e8 8e fc ff ff       	call   10f0 <puts@plt>
+    1462:	b8 00 00 00 00       	mov    eax,0x0
+    1467:	c9                   	leave
+    1468:	c3                   	ret
+
+0000000000001469 <change_aircon_temp>:
+    1469:	f3 0f 1e fa          	endbr64
+    146d:	55                   	push   rbp
+    146e:	48 89 e5             	mov    rbp,rsp
+    1471:	48 83 ec 10          	sub    rsp,0x10
+    1475:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+    147c:	00 00 
+    147e:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+    1482:	31 c0                	xor    eax,eax
+    1484:	66 c7 45 f2 00 00    	mov    WORD PTR [rbp-0xe],0x0
+    148a:	66 c7 45 f6 00 00    	mov    WORD PTR [rbp-0xa],0x0
+    1490:	66 c7 45 f4 00 00    	mov    WORD PTR [rbp-0xc],0x0
+    1496:	48 8d 05 e3 0c 00 00 	lea    rax,[rip+0xce3]        # 2180 <_IO_stdin_used+0x180>
+    149d:	48 89 c7             	mov    rdi,rax
+    14a0:	e8 4b fc ff ff       	call   10f0 <puts@plt>
+    14a5:	48 8d 45 f2          	lea    rax,[rbp-0xe]
+    14a9:	48 89 c6             	mov    rsi,rax
+    14ac:	48 8d 05 ec 0c 00 00 	lea    rax,[rip+0xcec]        # 219f <_IO_stdin_used+0x19f>
+    14b3:	48 89 c7             	mov    rdi,rax
+    14b6:	b8 00 00 00 00       	mov    eax,0x0
+    14bb:	e8 c0 fc ff ff       	call   1180 <__isoc99_scanf@plt>
+    14c0:	0f b7 45 f2          	movzx  eax,WORD PTR [rbp-0xe]
+    14c4:	66 89 45 f6          	mov    WORD PTR [rbp-0xa],ax
+    14c8:	48 8d 05 d3 0c 00 00 	lea    rax,[rip+0xcd3]        # 21a2 <_IO_stdin_used+0x1a2>
+    14cf:	48 89 c7             	mov    rdi,rax
+    14d2:	e8 19 fc ff ff       	call   10f0 <puts@plt>
+    14d7:	48 8d 45 f4          	lea    rax,[rbp-0xc]
+    14db:	48 89 c6             	mov    rsi,rax
+    14de:	48 8d 05 ba 0c 00 00 	lea    rax,[rip+0xcba]        # 219f <_IO_stdin_used+0x19f>
+    14e5:	48 89 c7             	mov    rdi,rax
+    14e8:	b8 00 00 00 00       	mov    eax,0x0
+    14ed:	e8 8e fc ff ff       	call   1180 <__isoc99_scanf@plt>
+    14f2:	0f b7 45 f4          	movzx  eax,WORD PTR [rbp-0xc]
+    14f6:	0f bf d0             	movsx  edx,ax
+    14f9:	0f b7 45 f2          	movzx  eax,WORD PTR [rbp-0xe]
+    14fd:	98                   	cwde
+    14fe:	89 d6                	mov    esi,edx
+    1500:	89 c7                	mov    edi,eax
+    1502:	e8 5a fe ff ff       	call   1361 <validate_inputs>
+    1507:	84 c0                	test   al,al
+    1509:	0f 84 89 00 00 00    	je     1598 <change_aircon_temp+0x12f>
+    150f:	48 8d 05 aa 0c 00 00 	lea    rax,[rip+0xcaa]        # 21c0 <_IO_stdin_used+0x1c0>
+    1516:	48 89 c7             	mov    rdi,rax
+    1519:	e8 d2 fb ff ff       	call   10f0 <puts@plt>
+    151e:	0f b7 45 f4          	movzx  eax,WORD PTR [rbp-0xc]
+    1522:	0f b7 55 f2          	movzx  edx,WORD PTR [rbp-0xe]
+    1526:	0f bf d2             	movsx  edx,dx
+    1529:	98                   	cwde
+    152a:	48 63 d2             	movsxd rdx,edx
+    152d:	48 8d 0c 95 00 00 00 	lea    rcx,[rdx*4+0x0]
+    1534:	00 
+    1535:	48 8d 15 24 2b 00 00 	lea    rdx,[rip+0x2b24]        # 4060 <AIRCON_REMOTE_TEMP>
+    153c:	89 04 11             	mov    DWORD PTR [rcx+rdx*1],eax
+    153f:	48 8d 05 a2 0c 00 00 	lea    rax,[rip+0xca2]        # 21e8 <_IO_stdin_used+0x1e8>
+    1546:	48 89 c7             	mov    rdi,rax
+    1549:	e8 a2 fb ff ff       	call   10f0 <puts@plt>
+    154e:	0f b7 45 f2          	movzx  eax,WORD PTR [rbp-0xe]
+    1552:	98                   	cwde
+    1553:	0f bf 55 f6          	movsx  edx,WORD PTR [rbp-0xa]
+    1557:	48 98                	cdqe
+    1559:	48 8d 0c 85 00 00 00 	lea    rcx,[rax*4+0x0]
+    1560:	00 
+    1561:	48 8d 05 f8 2a 00 00 	lea    rax,[rip+0x2af8]        # 4060 <AIRCON_REMOTE_TEMP>
+    1568:	8b 04 01             	mov    eax,DWORD PTR [rcx+rax*1]
+    156b:	48 63 d2             	movsxd rdx,edx
+    156e:	48 8d 0c 95 00 00 00 	lea    rcx,[rdx*4+0x0]
+    1575:	00 
+    1576:	48 8d 15 23 2b 00 00 	lea    rdx,[rip+0x2b23]        # 40a0 <AIRCON_ACTUAL_TEMP>
+    157d:	89 04 11             	mov    DWORD PTR [rcx+rdx*1],eax
+    1580:	b8 00 00 00 00       	mov    eax,0x0
+    1585:	e8 3e fe ff ff       	call   13c8 <aircon_has_same_temps>
+    158a:	84 c0                	test   al,al
+    158c:	74 0a                	je     1598 <change_aircon_temp+0x12f>
+    158e:	bf 01 00 00 00       	mov    edi,0x1
+    1593:	e8 f8 fb ff ff       	call   1190 <exit@plt>
+    1598:	90                   	nop
+    1599:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    159d:	64 48 2b 04 25 28 00 	sub    rax,QWORD PTR fs:0x28
+    15a4:	00 00 
+    15a6:	74 05                	je     15ad <change_aircon_temp+0x144>
+    15a8:	e8 53 fb ff ff       	call   1100 <__stack_chk_fail@plt>
+    15ad:	c9                   	leave
+    15ae:	c3                   	ret
+
+00000000000015af <view_aircon_temps>:
+    15af:	f3 0f 1e fa          	endbr64
+    15b3:	55                   	push   rbp
+    15b4:	48 89 e5             	mov    rbp,rsp
+    15b7:	48 83 ec 10          	sub    rsp,0x10
+    15bb:	48 8d 05 4a 0c 00 00 	lea    rax,[rip+0xc4a]        # 220c <_IO_stdin_used+0x20c>
+    15c2:	48 89 c7             	mov    rdi,rax
+    15c5:	e8 26 fb ff ff       	call   10f0 <puts@plt>
+    15ca:	c7 45 fc 00 00 00 00 	mov    DWORD PTR [rbp-0x4],0x0
+    15d1:	eb 4b                	jmp    161e <view_aircon_temps+0x6f>
+    15d3:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    15d6:	48 98                	cdqe
+    15d8:	48 8d 14 85 00 00 00 	lea    rdx,[rax*4+0x0]
+    15df:	00 
+    15e0:	48 8d 05 b9 2a 00 00 	lea    rax,[rip+0x2ab9]        # 40a0 <AIRCON_ACTUAL_TEMP>
+    15e7:	8b 0c 02             	mov    ecx,DWORD PTR [rdx+rax*1]
+    15ea:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    15ed:	48 98                	cdqe
+    15ef:	48 8d 14 85 00 00 00 	lea    rdx,[rax*4+0x0]
+    15f6:	00 
+    15f7:	48 8d 05 62 2a 00 00 	lea    rax,[rip+0x2a62]        # 4060 <AIRCON_REMOTE_TEMP>
+    15fe:	8b 14 02             	mov    edx,DWORD PTR [rdx+rax*1]
+    1601:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    1604:	89 c6                	mov    esi,eax
+    1606:	48 8d 05 03 0c 00 00 	lea    rax,[rip+0xc03]        # 2210 <_IO_stdin_used+0x210>
+    160d:	48 89 c7             	mov    rdi,rax
+    1610:	b8 00 00 00 00       	mov    eax,0x0
+    1615:	e8 06 fb ff ff       	call   1120 <printf@plt>
+    161a:	83 45 fc 01          	add    DWORD PTR [rbp-0x4],0x1
+    161e:	83 7d fc 09          	cmp    DWORD PTR [rbp-0x4],0x9
+    1622:	7e af                	jle    15d3 <view_aircon_temps+0x24>
+    1624:	48 8d 05 e1 0b 00 00 	lea    rax,[rip+0xbe1]        # 220c <_IO_stdin_used+0x20c>
+    162b:	48 89 c7             	mov    rdi,rax
+    162e:	e8 bd fa ff ff       	call   10f0 <puts@plt>
+    1633:	90                   	nop
+    1634:	c9                   	leave
+    1635:	c3                   	ret
+
+0000000000001636 <cat_flag>:
+    1636:	f3 0f 1e fa          	endbr64
+    163a:	55                   	push   rbp
+    163b:	48 89 e5             	mov    rbp,rsp
+    163e:	48 81 ec a0 00 00 00 	sub    rsp,0xa0
+    1645:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+    164c:	00 00 
+    164e:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+    1652:	31 c0                	xor    eax,eax
+    1654:	c7 85 60 ff ff ff 00 	mov    DWORD PTR [rbp-0xa0],0x0
+    165b:	00 00 00 
+    165e:	eb 3f                	jmp    169f <cat_flag+0x69>
+    1660:	8b 85 60 ff ff ff    	mov    eax,DWORD PTR [rbp-0xa0]
+    1666:	48 98                	cdqe
+    1668:	48 8d 14 85 00 00 00 	lea    rdx,[rax*4+0x0]
+    166f:	00 
+    1670:	48 8d 05 29 2a 00 00 	lea    rax,[rip+0x2a29]        # 40a0 <AIRCON_ACTUAL_TEMP>
+    1677:	8b 04 02             	mov    eax,DWORD PTR [rdx+rax*1]
+    167a:	83 f8 19             	cmp    eax,0x19
+    167d:	74 19                	je     1698 <cat_flag+0x62>
+    167f:	48 8d 05 ba 0b 00 00 	lea    rax,[rip+0xbba]        # 2240 <_IO_stdin_used+0x240>
+    1686:	48 89 c7             	mov    rdi,rax
+    1689:	e8 62 fa ff ff       	call   10f0 <puts@plt>
+    168e:	bf 01 00 00 00       	mov    edi,0x1
+    1693:	e8 f8 fa ff ff       	call   1190 <exit@plt>
+    1698:	83 85 60 ff ff ff 01 	add    DWORD PTR [rbp-0xa0],0x1
+    169f:	83 bd 60 ff ff ff 09 	cmp    DWORD PTR [rbp-0xa0],0x9
+    16a6:	7e b8                	jle    1660 <cat_flag+0x2a>
+    16a8:	be 00 00 00 00       	mov    esi,0x0
+    16ad:	48 8d 05 d7 0b 00 00 	lea    rax,[rip+0xbd7]        # 228b <_IO_stdin_used+0x28b>
+    16b4:	48 89 c7             	mov    rdi,rax
+    16b7:	b8 00 00 00 00       	mov    eax,0x0
+    16bc:	e8 9f fa ff ff       	call   1160 <open@plt>
+    16c1:	89 85 64 ff ff ff    	mov    DWORD PTR [rbp-0x9c],eax
+    16c7:	83 bd 64 ff ff ff 00 	cmp    DWORD PTR [rbp-0x9c],0x0
+    16ce:	79 19                	jns    16e9 <cat_flag+0xb3>
+    16d0:	48 8d 05 bd 0b 00 00 	lea    rax,[rip+0xbbd]        # 2294 <_IO_stdin_used+0x294>
+    16d7:	48 89 c7             	mov    rdi,rax
+    16da:	e8 91 fa ff ff       	call   1170 <perror@plt>
+    16df:	bf 01 00 00 00       	mov    edi,0x1
+    16e4:	e8 a7 fa ff ff       	call   1190 <exit@plt>
+    16e9:	48 8d 8d 70 ff ff ff 	lea    rcx,[rbp-0x90]
+    16f0:	8b 85 64 ff ff ff    	mov    eax,DWORD PTR [rbp-0x9c]
+    16f6:	ba 7f 00 00 00       	mov    edx,0x7f
+    16fb:	48 89 ce             	mov    rsi,rcx
+    16fe:	89 c7                	mov    edi,eax
+    1700:	e8 3b fa ff ff       	call   1140 <read@plt>
+    1705:	48 89 85 68 ff ff ff 	mov    QWORD PTR [rbp-0x98],rax
+    170c:	48 83 bd 68 ff ff ff 	cmp    QWORD PTR [rbp-0x98],0x0
+    1713:	00 
+    1714:	79 26                	jns    173c <cat_flag+0x106>
+    1716:	48 8d 05 8f 0b 00 00 	lea    rax,[rip+0xb8f]        # 22ac <_IO_stdin_used+0x2ac>
+    171d:	48 89 c7             	mov    rdi,rax
+    1720:	e8 4b fa ff ff       	call   1170 <perror@plt>
+    1725:	8b 85 64 ff ff ff    	mov    eax,DWORD PTR [rbp-0x9c]
+    172b:	89 c7                	mov    edi,eax
+    172d:	e8 fe f9 ff ff       	call   1130 <close@plt>
+    1732:	bf 01 00 00 00       	mov    edi,0x1
+    1737:	e8 54 fa ff ff       	call   1190 <exit@plt>
+    173c:	48 8d 95 70 ff ff ff 	lea    rdx,[rbp-0x90]
+    1743:	48 8b 85 68 ff ff ff 	mov    rax,QWORD PTR [rbp-0x98]
+    174a:	48 01 d0             	add    rax,rdx
+    174d:	c6 00 00             	mov    BYTE PTR [rax],0x0
+    1750:	48 8d 85 70 ff ff ff 	lea    rax,[rbp-0x90]
+    1757:	48 89 c6             	mov    rsi,rax
+    175a:	48 8d 05 63 0b 00 00 	lea    rax,[rip+0xb63]        # 22c4 <_IO_stdin_used+0x2c4>
+    1761:	48 89 c7             	mov    rdi,rax
+    1764:	b8 00 00 00 00       	mov    eax,0x0
+    1769:	e8 b2 f9 ff ff       	call   1120 <printf@plt>
+    176e:	8b 85 64 ff ff ff    	mov    eax,DWORD PTR [rbp-0x9c]
+    1774:	89 c7                	mov    edi,eax
+    1776:	e8 b5 f9 ff ff       	call   1130 <close@plt>
+    177b:	bf 01 00 00 00       	mov    edi,0x1
+    1780:	e8 0b fa ff ff       	call   1190 <exit@plt>
+
+0000000000001785 <main>:
+    1785:	f3 0f 1e fa          	endbr64
+    1789:	55                   	push   rbp
+    178a:	48 89 e5             	mov    rbp,rsp
+    178d:	48 83 ec 10          	sub    rsp,0x10
+    1791:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+    1798:	00 00 
+    179a:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+    179e:	31 c0                	xor    eax,eax
+    17a0:	b8 00 00 00 00       	mov    eax,0x0
+    17a5:	e8 df fa ff ff       	call   1289 <setup>
+    17aa:	b8 00 00 00 00       	mov    eax,0x0
+    17af:	e8 1c fb ff ff       	call   12d0 <setup_aircon>
+    17b4:	b8 00 00 00 00       	mov    eax,0x0
+    17b9:	e8 6b fb ff ff       	call   1329 <display_menu>
+    17be:	48 8d 05 0a 0b 00 00 	lea    rax,[rip+0xb0a]        # 22cf <_IO_stdin_used+0x2cf>
+    17c5:	48 89 c7             	mov    rdi,rax
+    17c8:	b8 00 00 00 00       	mov    eax,0x0
+    17cd:	e8 4e f9 ff ff       	call   1120 <printf@plt>
+    17d2:	48 8d 45 f4          	lea    rax,[rbp-0xc]
+    17d6:	48 89 c6             	mov    rsi,rax
+    17d9:	48 8d 05 bf 09 00 00 	lea    rax,[rip+0x9bf]        # 219f <_IO_stdin_used+0x19f>
+    17e0:	48 89 c7             	mov    rdi,rax
+    17e3:	b8 00 00 00 00       	mov    eax,0x0
+    17e8:	e8 93 f9 ff ff       	call   1180 <__isoc99_scanf@plt>
+    17ed:	e8 5e f9 ff ff       	call   1150 <getchar@plt>
+    17f2:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+    17f5:	83 f8 03             	cmp    eax,0x3
+    17f8:	74 29                	je     1823 <main+0x9e>
+    17fa:	83 f8 03             	cmp    eax,0x3
+    17fd:	7f 30                	jg     182f <main+0xaa>
+    17ff:	83 f8 01             	cmp    eax,0x1
+    1802:	74 07                	je     180b <main+0x86>
+    1804:	83 f8 02             	cmp    eax,0x2
+    1807:	74 0e                	je     1817 <main+0x92>
+    1809:	eb 24                	jmp    182f <main+0xaa>
+    180b:	b8 00 00 00 00       	mov    eax,0x0
+    1810:	e8 54 fc ff ff       	call   1469 <change_aircon_temp>
+    1815:	eb 2d                	jmp    1844 <main+0xbf>
+    1817:	b8 00 00 00 00       	mov    eax,0x0
+    181c:	e8 8e fd ff ff       	call   15af <view_aircon_temps>
+    1821:	eb 21                	jmp    1844 <main+0xbf>
+    1823:	b8 00 00 00 00       	mov    eax,0x0
+    1828:	e8 09 fe ff ff       	call   1636 <cat_flag>
+    182d:	eb 15                	jmp    1844 <main+0xbf>
+    182f:	48 8d 05 9c 0a 00 00 	lea    rax,[rip+0xa9c]        # 22d2 <_IO_stdin_used+0x2d2>
+    1836:	48 89 c7             	mov    rdi,rax
+    1839:	b8 00 00 00 00       	mov    eax,0x0
+    183e:	e8 dd f8 ff ff       	call   1120 <printf@plt>
+    1843:	90                   	nop
+    1844:	e9 6b ff ff ff       	jmp    17b4 <main+0x2f>
+
+Disassembly of section .fini:
+
+000000000000184c <_fini>:
+    184c:	f3 0f 1e fa          	endbr64
+    1850:	48 83 ec 08          	sub    rsp,0x8
+    1854:	48 83 c4 08          	add    rsp,0x8
+    1858:	c3                   	ret
+
+[+] Hexdump of .text section:
+
+./finals/dist-aircon/aircon:     file format elf64-x86-64
+
+Contents of section .text:
+ 11a0 f30f1efa 31ed4989 d15e4889 e24883e4  ....1.I..^H..H..
+ 11b0 f0505445 31c031c9 488d3dc6 050000ff  .PTE1.1.H.=.....
+ 11c0 15132e00 00f4662e 0f1f8400 00000000  ......f.........
+ 11d0 488d3d39 2e000048 8d05322e 00004839  H.=9...H..2...H9
+ 11e0 f8741548 8b05f62d 00004885 c07409ff  .t.H...-..H..t..
+ 11f0 e00f1f80 00000000 c30f1f80 00000000  ................
+ 1200 488d3d09 2e000048 8d35022e 00004829  H.=....H.5....H)
+ 1210 fe4889f0 48c1ee3f 48c1f803 4801c648  .H..H..?H...H..H
+ 1220 d1fe7414 488b05c5 2d000048 85c07408  ..t.H...-..H..t.
+ 1230 ffe0660f 1f440000 c30f1f80 00000000  ..f..D..........
+ 1240 f30f1efa 803dfd2d 00000075 2b554883  .....=.-...u+UH.
+ 1250 3da22d00 00004889 e5740c48 8b3da62d  =.-...H..t.H.=.-
+ 1260 0000e879 feffffe8 64ffffff c605d52d  ...y....d......-
+ 1270 0000015d c30f1f00 c30f1f80 00000000  ...]............
+ 1280 f30f1efa e977ffff fff30f1e fa554889  .....w.......UH.
+ 1290 e5488b05 982d0000 be000000 004889c7  .H...-.......H..
+ 12a0 e86bfeff ff488b05 742d0000 be000000  .k...H..t-......
+ 12b0 004889c7 e857feff ff488b05 802d0000  .H...W...H...-..
+ 12c0 be000000 004889c7 e843feff ff905dc3  .....H...C....].
+ 12d0 f30f1efa 554889e5 c745fc00 000000eb  ....UH...E......
+ 12e0 3e8b45fc 8d48148b 45fc4898 488d1485  >.E..H..E.H.H...
+ 12f0 00000000 488d0565 2d000089 0c028b45  ....H..e-......E
+ 1300 fc8d4814 8b45fc48 98488d14 85000000  ..H..E.H.H......
+ 1310 00488d05 882d0000 890c0283 45fc0183  .H...-......E...
+ 1320 7dfc097e bc90905d c3f30f1e fa554889  }..~...].....UH.
+ 1330 e5488d05 d00c0000 4889c7e8 b0fdffff  .H......H.......
+ 1340 488d05d8 0c000048 89c7e8a1 fdffff48  H......H.......H
+ 1350 8d05df0c 00004889 c7e892fd ffff905d  ......H........]
+ 1360 c3f30f1e fa554889 e54883ec 1089fa89  .....UH..H......
+ 1370 f0668955 fc668945 f866837d fc007807  .f.U.f.E.f.}..x.
+ 1380 66837dfc 097e1648 8d05ba0c 00004889  f.}..~.H......H.
+ 1390 c7e85afd ffffb800 000000eb 2966837d  ..Z.........)f.}
+ 13a0 f8137e07 66837df8 1d7e1648 8d05ce0c  ..~.f.}..~.H....
+ 13b0 00004889 c7e836fd ffffb800 000000eb  ..H...6.........
+ 13c0 05b80100 0000c9c3 f30f1efa 554889e5  ............UH..
+ 13d0 4883ec10 488d05dd 0c000048 89c7e80d  H...H......H....
+ 13e0 fdffffc7 45f80000 0000eb61 8b45f883  ....E......a.E..
+ 13f0 c0018945 fceb4c8b 45f84898 488d1485  ...E..L.E.H.H...
+ 1400 00000000 488d0555 2c00008b 14028b45  ....H..U,......E
+ 1410 fc489848 8d0c8500 00000048 8d053e2c  .H.H.......H..>,
+ 1420 00008b04 0139c275 16488d05 c80c0000  .....9.u.H......
+ 1430 4889c7e8 b8fcffff b8010000 00eb2883  H.............(.
+ 1440 45fc0183 7dfc097e ae8345f8 01837df8  E...}..~..E...}.
+ 1450 097e9948 8d05f60c 00004889 c7e88efc  .~.H......H.....
+ 1460 ffffb800 000000c9 c3f30f1e fa554889  .............UH.
+ 1470 e54883ec 1064488b 04252800 00004889  .H...dH..%(...H.
+ 1480 45f831c0 66c745f2 000066c7 45f60000  E.1.f.E...f.E...
+ 1490 66c745f4 0000488d 05e30c00 004889c7  f.E...H......H..
+ 14a0 e84bfcff ff488d45 f24889c6 488d05ec  .K...H.E.H..H...
+ 14b0 0c000048 89c7b800 000000e8 c0fcffff  ...H............
+ 14c0 0fb745f2 668945f6 488d05d3 0c000048  ..E.f.E.H......H
+ 14d0 89c7e819 fcffff48 8d45f448 89c6488d  .......H.E.H..H.
+ 14e0 05ba0c00 004889c7 b8000000 00e88efc  .....H..........
+ 14f0 ffff0fb7 45f40fbf d00fb745 f29889d6  ....E......E....
+ 1500 89c7e85a feffff84 c00f8489 00000048  ...Z...........H
+ 1510 8d05aa0c 00004889 c7e8d2fb ffff0fb7  ......H.........
+ 1520 45f40fb7 55f20fbf d2984863 d2488d0c  E...U.....Hc.H..
+ 1530 95000000 00488d15 242b0000 89041148  .....H..$+.....H
+ 1540 8d05a20c 00004889 c7e8a2fb ffff0fb7  ......H.........
+ 1550 45f2980f bf55f648 98488d0c 85000000  E....U.H.H......
+ 1560 00488d05 f82a0000 8b040148 63d2488d  .H...*.....Hc.H.
+ 1570 0c950000 0000488d 15232b00 00890411  ......H..#+.....
+ 1580 b8000000 00e83efe ffff84c0 740abf01  ......>.....t...
+ 1590 000000e8 f8fbffff 90488b45 f864482b  .........H.E.dH+
+ 15a0 04252800 00007405 e853fbff ffc9c3f3  .%(...t..S......
+ 15b0 0f1efa55 4889e548 83ec1048 8d054a0c  ...UH..H...H..J.
+ 15c0 00004889 c7e826fb ffffc745 fc000000  ..H...&....E....
+ 15d0 00eb4b8b 45fc4898 488d1485 00000000  ..K.E.H.H.......
+ 15e0 488d05b9 2a00008b 0c028b45 fc489848  H...*......E.H.H
+ 15f0 8d148500 00000048 8d05622a 00008b14  .......H..b*....
+ 1600 028b45fc 89c6488d 05030c00 004889c7  ..E...H......H..
+ 1610 b8000000 00e806fb ffff8345 fc01837d  ...........E...}
+ 1620 fc097eaf 488d05e1 0b000048 89c7e8bd  ..~.H......H....
+ 1630 faffff90 c9c3f30f 1efa5548 89e54881  ..........UH..H.
+ 1640 eca00000 0064488b 04252800 00004889  .....dH..%(...H.
+ 1650 45f831c0 c78560ff ffff0000 0000eb3f  E.1...`........?
+ 1660 8b8560ff ffff4898 488d1485 00000000  ..`...H.H.......
+ 1670 488d0529 2a00008b 040283f8 19741948  H..)*........t.H
+ 1680 8d05ba0b 00004889 c7e862fa ffffbf01  ......H...b.....
+ 1690 000000e8 f8faffff 838560ff ffff0183  ..........`.....
+ 16a0 bd60ffff ff097eb8 be000000 00488d05  .`....~......H..
+ 16b0 d70b0000 4889c7b8 00000000 e89ffaff  ....H...........
+ 16c0 ff898564 ffffff83 bd64ffff ff007919  ...d.....d....y.
+ 16d0 488d05bd 0b000048 89c7e891 faffffbf  H......H........
+ 16e0 01000000 e8a7faff ff488d8d 70ffffff  .........H..p...
+ 16f0 8b8564ff ffffba7f 00000048 89ce89c7  ..d........H....
+ 1700 e83bfaff ff488985 68ffffff 4883bd68  .;...H..h...H..h
+ 1710 ffffff00 7926488d 058f0b00 004889c7  ....y&H......H..
+ 1720 e84bfaff ff8b8564 ffffff89 c7e8fef9  .K.....d........
+ 1730 ffffbf01 000000e8 54faffff 488d9570  ........T...H..p
+ 1740 ffffff48 8b8568ff ffff4801 d0c60000  ...H..h...H.....
+ 1750 488d8570 ffffff48 89c6488d 05630b00  H..p...H..H..c..
+ 1760 004889c7 b8000000 00e8b2f9 ffff8b85  .H..............
+ 1770 64ffffff 89c7e8b5 f9ffffbf 01000000  d...............
+ 1780 e80bfaff fff30f1e fa554889 e54883ec  .........UH..H..
+ 1790 1064488b 04252800 00004889 45f831c0  .dH..%(...H.E.1.
+ 17a0 b8000000 00e8dffa ffffb800 000000e8  ................
+ 17b0 1cfbffff b8000000 00e86bfb ffff488d  ..........k...H.
+ 17c0 050a0b00 004889c7 b8000000 00e84ef9  .....H........N.
+ 17d0 ffff488d 45f44889 c6488d05 bf090000  ..H.E.H..H......
+ 17e0 4889c7b8 00000000 e893f9ff ffe85ef9  H.............^.
+ 17f0 ffff8b45 f483f803 742983f8 037f3083  ...E....t)....0.
+ 1800 f8017407 83f80274 0eeb24b8 00000000  ..t....t..$.....
+ 1810 e854fcff ffeb2db8 00000000 e88efdff  .T....-.........
+ 1820 ffeb21b8 00000000 e809feff ffeb1548  ..!............H
+ 1830 8d059c0a 00004889 c7b80000 0000e8dd  ......H.........
+ 1840 f8ffff90 e96bffff ff                 .....k...       
+
+[+] ROP Gadgets:
+
+[+] ROP Pop/Ret Gadgets:
+
+[+] Syscall Gadgets:

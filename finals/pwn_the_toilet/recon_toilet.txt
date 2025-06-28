@@ -1,0 +1,1255 @@
+[*] Target Binary: dist-pwn-the-toilet/toilet
+
+dist-pwn-the-toilet/toilet: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=e9afeebb86690f090605c672410bd6ddcddf7617, for GNU/Linux 3.2.0, not stripped
+
+[+] Checksec:
+
+[+] ELF Header:
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Position-Independent Executable file)
+  Machine:                           Advanced Micro Devices X86-64
+  Version:                           0x1
+  Entry point address:               0x1180
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          14848 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         13
+  Size of section headers:           64 (bytes)
+  Number of section headers:         31
+  Section header string table index: 30
+
+[+] Section Headers:
+There are 31 section headers, starting at offset 0x3a00:
+
+Section Headers:
+  [Nr] Name              Type             Address           Offset
+       Size              EntSize          Flags  Link  Info  Align
+  [ 0]                   NULL             0000000000000000  00000000
+       0000000000000000  0000000000000000           0     0     0
+  [ 1] .interp           PROGBITS         0000000000000318  00000318
+       000000000000001c  0000000000000000   A       0     0     1
+  [ 2] .note.gnu.pr[...] NOTE             0000000000000338  00000338
+       0000000000000030  0000000000000000   A       0     0     8
+  [ 3] .note.gnu.bu[...] NOTE             0000000000000368  00000368
+       0000000000000024  0000000000000000   A       0     0     4
+  [ 4] .note.ABI-tag     NOTE             000000000000038c  0000038c
+       0000000000000020  0000000000000000   A       0     0     4
+  [ 5] .gnu.hash         GNU_HASH         00000000000003b0  000003b0
+       0000000000000034  0000000000000000   A       6     0     8
+  [ 6] .dynsym           DYNSYM           00000000000003e8  000003e8
+       00000000000001c8  0000000000000018   A       7     1     8
+  [ 7] .dynstr           STRTAB           00000000000005b0  000005b0
+       0000000000000101  0000000000000000   A       0     0     1
+  [ 8] .gnu.version      VERSYM           00000000000006b2  000006b2
+       0000000000000026  0000000000000002   A       6     0     2
+  [ 9] .gnu.version_r    VERNEED          00000000000006d8  000006d8
+       0000000000000050  0000000000000000   A       7     1     8
+  [10] .rela.dyn         RELA             0000000000000728  00000728
+       0000000000000108  0000000000000018   A       6     0     8
+  [11] .rela.plt         RELA             0000000000000830  00000830
+       00000000000000f0  0000000000000018  AI       6    24     8
+  [12] .init             PROGBITS         0000000000001000  00001000
+       000000000000001b  0000000000000000  AX       0     0     4
+  [13] .plt              PROGBITS         0000000000001020  00001020
+       00000000000000b0  0000000000000010  AX       0     0     16
+  [14] .plt.got          PROGBITS         00000000000010d0  000010d0
+       0000000000000010  0000000000000010  AX       0     0     16
+  [15] .plt.sec          PROGBITS         00000000000010e0  000010e0
+       00000000000000a0  0000000000000010  AX       0     0     16
+  [16] .text             PROGBITS         0000000000001180  00001180
+       0000000000000691  0000000000000000  AX       0     0     16
+  [17] .fini             PROGBITS         0000000000001814  00001814
+       000000000000000d  0000000000000000  AX       0     0     4
+  [18] .rodata           PROGBITS         0000000000002000  00002000
+       000000000000031c  0000000000000000   A       0     0     8
+  [19] .eh_frame_hdr     PROGBITS         000000000000231c  0000231c
+       0000000000000064  0000000000000000   A       0     0     4
+  [20] .eh_frame         PROGBITS         0000000000002380  00002380
+       0000000000000168  0000000000000000   A       0     0     8
+  [21] .init_array       INIT_ARRAY       0000000000003d70  00002d70
+       0000000000000008  0000000000000008  WA       0     0     8
+  [22] .fini_array       FINI_ARRAY       0000000000003d78  00002d78
+       0000000000000008  0000000000000008  WA       0     0     8
+  [23] .dynamic          DYNAMIC          0000000000003d80  00002d80
+       00000000000001f0  0000000000000010  WA       7     0     8
+  [24] .got              PROGBITS         0000000000003f70  00002f70
+       0000000000000090  0000000000000008  WA       0     0     8
+  [25] .data             PROGBITS         0000000000004000  00003000
+       0000000000000010  0000000000000000  WA       0     0     8
+  [26] .bss              NOBITS           0000000000004020  00003010
+       0000000000000088  0000000000000000  WA       0     0     32
+  [27] .comment          PROGBITS         0000000000000000  00003010
+       000000000000002b  0000000000000001  MS       0     0     1
+  [28] .symtab           SYMTAB           0000000000000000  00003040
+       0000000000000570  0000000000000018          29    18     8
+  [29] .strtab           STRTAB           0000000000000000  000035b0
+       0000000000000334  0000000000000000           0     0     1
+  [30] .shstrtab         STRTAB           0000000000000000  000038e4
+       000000000000011a  0000000000000000           0     0     1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), l (large), p (processor specific)
+
+[+] Program Headers:
+
+Elf file type is DYN (Position-Independent Executable file)
+Entry point 0x1180
+There are 13 program headers, starting at offset 64
+
+Program Headers:
+  Type           Offset             VirtAddr           PhysAddr
+                 FileSiz            MemSiz              Flags  Align
+  PHDR           0x0000000000000040 0x0000000000000040 0x0000000000000040
+                 0x00000000000002d8 0x00000000000002d8  R      0x8
+  INTERP         0x0000000000000318 0x0000000000000318 0x0000000000000318
+                 0x000000000000001c 0x000000000000001c  R      0x1
+      [Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]
+  LOAD           0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x0000000000000920 0x0000000000000920  R      0x1000
+  LOAD           0x0000000000001000 0x0000000000001000 0x0000000000001000
+                 0x0000000000000821 0x0000000000000821  R E    0x1000
+  LOAD           0x0000000000002000 0x0000000000002000 0x0000000000002000
+                 0x00000000000004e8 0x00000000000004e8  R      0x1000
+  LOAD           0x0000000000002d70 0x0000000000003d70 0x0000000000003d70
+                 0x00000000000002a0 0x0000000000000338  RW     0x1000
+  DYNAMIC        0x0000000000002d80 0x0000000000003d80 0x0000000000003d80
+                 0x00000000000001f0 0x00000000000001f0  RW     0x8
+  NOTE           0x0000000000000338 0x0000000000000338 0x0000000000000338
+                 0x0000000000000030 0x0000000000000030  R      0x8
+  NOTE           0x0000000000000368 0x0000000000000368 0x0000000000000368
+                 0x0000000000000044 0x0000000000000044  R      0x4
+  GNU_PROPERTY   0x0000000000000338 0x0000000000000338 0x0000000000000338
+                 0x0000000000000030 0x0000000000000030  R      0x8
+  GNU_EH_FRAME   0x000000000000231c 0x000000000000231c 0x000000000000231c
+                 0x0000000000000064 0x0000000000000064  R      0x4
+  GNU_STACK      0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x0000000000000000 0x0000000000000000  RW     0x10
+  GNU_RELRO      0x0000000000002d70 0x0000000000003d70 0x0000000000003d70
+                 0x0000000000000290 0x0000000000000290  R      0x1
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     
+   01     .interp 
+   02     .interp .note.gnu.property .note.gnu.build-id .note.ABI-tag .gnu.hash .dynsym .dynstr .gnu.version .gnu.version_r .rela.dyn .rela.plt 
+   03     .init .plt .plt.got .plt.sec .text .fini 
+   04     .rodata .eh_frame_hdr .eh_frame 
+   05     .init_array .fini_array .dynamic .got .data .bss 
+   06     .dynamic 
+   07     .note.gnu.property 
+   08     .note.gnu.build-id .note.ABI-tag 
+   09     .note.gnu.property 
+   10     .eh_frame_hdr 
+   11     
+   12     .init_array .fini_array .dynamic .got 
+
+[+] Symbol Table:
+
+Symbol table '.dynsym' contains 19 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND free@GLIBC_2.2.5 (2)
+     2: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND _[...]@GLIBC_2.34 (3)
+     3: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterT[...]
+     4: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND puts@GLIBC_2.2.5 (2)
+     5: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __[...]@GLIBC_2.4 (4)
+     6: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBC_2.2.5 (2)
+     7: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBC_2.2.5 (2)
+     8: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND read@GLIBC_2.2.5 (2)
+     9: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+    10: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBC_2.2.5 (2)
+    11: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBC_2.2.5 (2)
+    12: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __[...]@GLIBC_2.7 (5)
+    13: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND exit@GLIBC_2.2.5 (2)
+    14: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMC[...]
+    15: 0000000000004020     8 OBJECT  GLOBAL DEFAULT   26 [...]@GLIBC_2.2.5 (2)
+    16: 0000000000000000     0 FUNC    WEAK   DEFAULT  UND [...]@GLIBC_2.2.5 (2)
+    17: 0000000000004030     8 OBJECT  GLOBAL DEFAULT   26 stdin@GLIBC_2.2.5 (2)
+    18: 0000000000004040     8 OBJECT  GLOBAL DEFAULT   26 [...]@GLIBC_2.2.5 (2)
+
+Symbol table '.symtab' contains 58 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS Scrt1.o
+     2: 000000000000038c    32 OBJECT  LOCAL  DEFAULT    4 __abi_tag
+     3: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+     4: 00000000000011b0     0 FUNC    LOCAL  DEFAULT   16 deregister_tm_clones
+     5: 00000000000011e0     0 FUNC    LOCAL  DEFAULT   16 register_tm_clones
+     6: 0000000000001220     0 FUNC    LOCAL  DEFAULT   16 __do_global_dtors_aux
+     7: 0000000000004048     1 OBJECT  LOCAL  DEFAULT   26 completed.0
+     8: 0000000000003d78     0 OBJECT  LOCAL  DEFAULT   22 __do_global_dtor[...]
+     9: 0000000000001260     0 FUNC    LOCAL  DEFAULT   16 frame_dummy
+    10: 0000000000003d70     0 OBJECT  LOCAL  DEFAULT   21 __frame_dummy_in[...]
+    11: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS toilet.c
+    12: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+    13: 00000000000024e4     0 OBJECT  LOCAL  DEFAULT   20 __FRAME_END__
+    14: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS 
+    15: 0000000000003d80     0 OBJECT  LOCAL  DEFAULT   23 _DYNAMIC
+    16: 000000000000231c     0 NOTYPE  LOCAL  DEFAULT   19 __GNU_EH_FRAME_HDR
+    17: 0000000000003f70     0 OBJECT  LOCAL  DEFAULT   24 _GLOBAL_OFFSET_TABLE_
+    18: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND free@GLIBC_2.2.5
+    19: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __libc_start_mai[...]
+    20: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterT[...]
+    21: 0000000000004020     8 OBJECT  GLOBAL DEFAULT   26 stdout@GLIBC_2.2.5
+    22: 0000000000004000     0 NOTYPE  WEAK   DEFAULT   25 data_start
+    23: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND puts@GLIBC_2.2.5
+    24: 0000000000004030     8 OBJECT  GLOBAL DEFAULT   26 stdin@GLIBC_2.2.5
+    25: 0000000000004010     0 NOTYPE  GLOBAL DEFAULT   25 _edata
+    26: 000000000000152e   411 FUNC    GLOBAL DEFAULT   16 mess_with_poop
+    27: 0000000000001814     0 FUNC    GLOBAL HIDDEN    17 _fini
+    28: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __stack_chk_fail[...]
+    29: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND setbuf@GLIBC_2.2.5
+    30: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND printf@GLIBC_2.2.5
+    31: 0000000000002008     4 OBJECT  GLOBAL DEFAULT   18 MAX_MESSES
+    32: 00000000000016c9   121 FUNC    GLOBAL DEFAULT   16 banner
+    33: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND read@GLIBC_2.2.5
+    34: 0000000000004000     0 NOTYPE  GLOBAL DEFAULT   25 __data_start
+    35: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+    36: 0000000000004064     4 OBJECT  GLOBAL DEFAULT   26 messes_used
+    37: 0000000000004008     0 OBJECT  GLOBAL HIDDEN    25 __dso_handle
+    38: 0000000000002000     4 OBJECT  GLOBAL DEFAULT   18 _IO_stdin_used
+    39: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND malloc@GLIBC_2.2.5
+    40: 00000000000040a8     0 NOTYPE  GLOBAL DEFAULT   26 _end
+    41: 0000000000001180    38 FUNC    GLOBAL DEFAULT   16 _start
+    42: 0000000000004010     0 NOTYPE  GLOBAL DEFAULT   26 __bss_start
+    43: 0000000000001742   207 FUNC    GLOBAL DEFAULT   16 main
+    44: 0000000000004060     4 OBJECT  GLOBAL DEFAULT   26 poops_used
+    45: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND setvbuf@GLIBC_2.2.5
+    46: 0000000000004080    40 OBJECT  GLOBAL DEFAULT   26 poopsies
+    47: 00000000000012ba   167 FUNC    GLOBAL DEFAULT   16 take_a_big_poop
+    48: 000000000000143a   244 FUNC    GLOBAL DEFAULT   16 view_poop
+    49: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __isoc99_scanf@G[...]
+    50: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND exit@GLIBC_2.2.5
+    51: 0000000000004010     0 OBJECT  GLOBAL HIDDEN    25 __TMC_END__
+    52: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMC[...]
+    53: 0000000000000000     0 FUNC    WEAK   DEFAULT  UND __cxa_finalize@G[...]
+    54: 0000000000001000     0 FUNC    GLOBAL HIDDEN    12 _init
+    55: 0000000000001361   217 FUNC    GLOBAL DEFAULT   16 clear_poop
+    56: 0000000000001269    81 FUNC    GLOBAL DEFAULT   16 setup
+    57: 0000000000004040     8 OBJECT  GLOBAL DEFAULT   26 stderr@GLIBC_2.2.5
+
+[+] Relocations:
+
+Relocation section '.rela.dyn' at offset 0x728 contains 11 entries:
+  Offset          Info           Type           Sym. Value    Sym. Name + Addend
+000000003d70  000000000008 R_X86_64_RELATIVE                    1260
+000000003d78  000000000008 R_X86_64_RELATIVE                    1220
+000000004008  000000000008 R_X86_64_RELATIVE                    4008
+000000003fd8  000200000006 R_X86_64_GLOB_DAT 0000000000000000 __libc_start_main@GLIBC_2.34 + 0
+000000003fe0  000300000006 R_X86_64_GLOB_DAT 0000000000000000 _ITM_deregisterTM[...] + 0
+000000003fe8  000900000006 R_X86_64_GLOB_DAT 0000000000000000 __gmon_start__ + 0
+000000003ff0  000e00000006 R_X86_64_GLOB_DAT 0000000000000000 _ITM_registerTMCl[...] + 0
+000000003ff8  001000000006 R_X86_64_GLOB_DAT 0000000000000000 __cxa_finalize@GLIBC_2.2.5 + 0
+000000004020  000f00000005 R_X86_64_COPY     0000000000004020 stdout@GLIBC_2.2.5 + 0
+000000004030  001100000005 R_X86_64_COPY     0000000000004030 stdin@GLIBC_2.2.5 + 0
+000000004040  001200000005 R_X86_64_COPY     0000000000004040 stderr@GLIBC_2.2.5 + 0
+
+Relocation section '.rela.plt' at offset 0x830 contains 10 entries:
+  Offset          Info           Type           Sym. Value    Sym. Name + Addend
+000000003f88  000100000007 R_X86_64_JUMP_SLO 0000000000000000 free@GLIBC_2.2.5 + 0
+000000003f90  000400000007 R_X86_64_JUMP_SLO 0000000000000000 puts@GLIBC_2.2.5 + 0
+000000003f98  000500000007 R_X86_64_JUMP_SLO 0000000000000000 __stack_chk_fail@GLIBC_2.4 + 0
+000000003fa0  000600000007 R_X86_64_JUMP_SLO 0000000000000000 setbuf@GLIBC_2.2.5 + 0
+000000003fa8  000700000007 R_X86_64_JUMP_SLO 0000000000000000 printf@GLIBC_2.2.5 + 0
+000000003fb0  000800000007 R_X86_64_JUMP_SLO 0000000000000000 read@GLIBC_2.2.5 + 0
+000000003fb8  000a00000007 R_X86_64_JUMP_SLO 0000000000000000 malloc@GLIBC_2.2.5 + 0
+000000003fc0  000b00000007 R_X86_64_JUMP_SLO 0000000000000000 setvbuf@GLIBC_2.2.5 + 0
+000000003fc8  000c00000007 R_X86_64_JUMP_SLO 0000000000000000 __isoc99_scanf@GLIBC_2.7 + 0
+000000003fd0  000d00000007 R_X86_64_JUMP_SLO 0000000000000000 exit@GLIBC_2.2.5 + 0
+
+[+] Static Symbols:
+000000000000038c r __abi_tag
+00000000000016c9 T banner
+0000000000004010 B __bss_start
+0000000000001361 T clear_poop
+0000000000004048 b completed.0
+                 w __cxa_finalize@GLIBC_2.2.5
+0000000000004000 D __data_start
+0000000000004000 W data_start
+00000000000011b0 t deregister_tm_clones
+0000000000001220 t __do_global_dtors_aux
+0000000000003d78 d __do_global_dtors_aux_fini_array_entry
+0000000000004008 D __dso_handle
+0000000000003d80 d _DYNAMIC
+0000000000004010 D _edata
+00000000000040a8 B _end
+                 U exit@GLIBC_2.2.5
+0000000000001814 T _fini
+0000000000001260 t frame_dummy
+0000000000003d70 d __frame_dummy_init_array_entry
+00000000000024e4 r __FRAME_END__
+                 U free@GLIBC_2.2.5
+0000000000003f70 d _GLOBAL_OFFSET_TABLE_
+                 w __gmon_start__
+000000000000231c r __GNU_EH_FRAME_HDR
+0000000000001000 T _init
+0000000000002000 R _IO_stdin_used
+                 U __isoc99_scanf@GLIBC_2.7
+                 w _ITM_deregisterTMCloneTable
+                 w _ITM_registerTMCloneTable
+                 U __libc_start_main@GLIBC_2.34
+0000000000001742 T main
+                 U malloc@GLIBC_2.2.5
+0000000000002008 R MAX_MESSES
+0000000000004064 B messes_used
+000000000000152e T mess_with_poop
+0000000000004080 B poopsies
+0000000000004060 B poops_used
+                 U printf@GLIBC_2.2.5
+                 U puts@GLIBC_2.2.5
+                 U read@GLIBC_2.2.5
+00000000000011e0 t register_tm_clones
+                 U setbuf@GLIBC_2.2.5
+0000000000001269 T setup
+                 U setvbuf@GLIBC_2.2.5
+                 U __stack_chk_fail@GLIBC_2.4
+0000000000001180 T _start
+0000000000004040 B stderr@GLIBC_2.2.5
+0000000000004030 B stdin@GLIBC_2.2.5
+0000000000004020 B stdout@GLIBC_2.2.5
+00000000000012ba T take_a_big_poop
+0000000000004010 D __TMC_END__
+000000000000143a T view_poop
+
+[+] Dynamic Symbols:
+                 w __cxa_finalize@GLIBC_2.2.5
+                 U exit@GLIBC_2.2.5
+                 U free@GLIBC_2.2.5
+                 w __gmon_start__
+                 U __isoc99_scanf@GLIBC_2.7
+                 w _ITM_deregisterTMCloneTable
+                 w _ITM_registerTMCloneTable
+                 U __libc_start_main@GLIBC_2.34
+                 U malloc@GLIBC_2.2.5
+                 U printf@GLIBC_2.2.5
+                 U puts@GLIBC_2.2.5
+                 U read@GLIBC_2.2.5
+                 U setbuf@GLIBC_2.2.5
+                 U setvbuf@GLIBC_2.2.5
+                 U __stack_chk_fail@GLIBC_2.4
+0000000000004040 B stderr@GLIBC_2.2.5
+0000000000004030 B stdin@GLIBC_2.2.5
+0000000000004020 B stdout@GLIBC_2.2.5
+
+[+] Strings (length ≥ 5):
+/lib64/ld-linux-x86-64.so.2
+__cxa_finalize
+malloc
+__libc_start_main
+setvbuf
+stdout
+stdin
+__isoc99_scanf
+stderr
+setbuf
+__stack_chk_fail
+printf
+libc.so.6
+GLIBC_2.7
+GLIBC_2.4
+GLIBC_2.34
+GLIBC_2.2.5
+_ITM_deregisterTMCloneTable
+__gmon_start__
+_ITM_registerTMCloneTable
+You've pooped too many times!
+Poop taken at index %d
+Which poop would you like to clear?
+Invalid index.
+There's no poop here...
+All done!
+Which poop would you like to view?
+Oh! Someone took a poop of size 0x%lx at %p!
+The poop content was: %s
+With your entire body smelling like poop, you get taken out by security...
+You decide to get dirty and mess with your poop...
+Which poop would you like to mess with?
+Which part of your poop would you like to mess with?
+Invalid offset.
+Enter your modified poop: 
+Poop modified! Now don't be doing that again!
+What would you like to do?
+1. Clear poop
+2. Take a big poop
+3. View poop
+4. Mess with poop
+5. Leave the toilet
+Welcome to the toilet!
+Erm... I don't think you can do that in the toilet.
+:*3$"
+GCC: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+Scrt1.o
+__abi_tag
+crtstuff.c
+deregister_tm_clones
+__do_global_dtors_aux
+completed.0
+__do_global_dtors_aux_fini_array_entry
+frame_dummy
+__frame_dummy_init_array_entry
+toilet.c
+__FRAME_END__
+_DYNAMIC
+__GNU_EH_FRAME_HDR
+_GLOBAL_OFFSET_TABLE_
+free@GLIBC_2.2.5
+__libc_start_main@GLIBC_2.34
+_ITM_deregisterTMCloneTable
+stdout@GLIBC_2.2.5
+puts@GLIBC_2.2.5
+stdin@GLIBC_2.2.5
+_edata
+mess_with_poop
+_fini
+__stack_chk_fail@GLIBC_2.4
+setbuf@GLIBC_2.2.5
+printf@GLIBC_2.2.5
+MAX_MESSES
+banner
+read@GLIBC_2.2.5
+__data_start
+__gmon_start__
+messes_used
+__dso_handle
+_IO_stdin_used
+malloc@GLIBC_2.2.5
+__bss_start
+poops_used
+setvbuf@GLIBC_2.2.5
+poopsies
+take_a_big_poop
+view_poop
+__isoc99_scanf@GLIBC_2.7
+exit@GLIBC_2.2.5
+__TMC_END__
+_ITM_registerTMCloneTable
+__cxa_finalize@GLIBC_2.2.5
+_init
+clear_poop
+setup
+stderr@GLIBC_2.2.5
+.symtab
+.strtab
+.shstrtab
+.interp
+.note.gnu.property
+.note.gnu.build-id
+.note.ABI-tag
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.plt.got
+.plt.sec
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.dynamic
+.data
+.comment
+
+[+] Strings with '/bin':
+
+[+] Disassembly (.text, Intel syntax):
+
+dist-pwn-the-toilet/toilet:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000001000 <_init>:
+    1000:	f3 0f 1e fa          	endbr64
+    1004:	48 83 ec 08          	sub    rsp,0x8
+    1008:	48 8b 05 d9 2f 00 00 	mov    rax,QWORD PTR [rip+0x2fd9]        # 3fe8 <__gmon_start__@Base>
+    100f:	48 85 c0             	test   rax,rax
+    1012:	74 02                	je     1016 <_init+0x16>
+    1014:	ff d0                	call   rax
+    1016:	48 83 c4 08          	add    rsp,0x8
+    101a:	c3                   	ret
+
+Disassembly of section .plt:
+
+0000000000001020 <.plt>:
+    1020:	ff 35 52 2f 00 00    	push   QWORD PTR [rip+0x2f52]        # 3f78 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	f2 ff 25 53 2f 00 00 	bnd jmp QWORD PTR [rip+0x2f53]        # 3f80 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102d:	0f 1f 00             	nop    DWORD PTR [rax]
+    1030:	f3 0f 1e fa          	endbr64
+    1034:	68 00 00 00 00       	push   0x0
+    1039:	f2 e9 e1 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    103f:	90                   	nop
+    1040:	f3 0f 1e fa          	endbr64
+    1044:	68 01 00 00 00       	push   0x1
+    1049:	f2 e9 d1 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    104f:	90                   	nop
+    1050:	f3 0f 1e fa          	endbr64
+    1054:	68 02 00 00 00       	push   0x2
+    1059:	f2 e9 c1 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    105f:	90                   	nop
+    1060:	f3 0f 1e fa          	endbr64
+    1064:	68 03 00 00 00       	push   0x3
+    1069:	f2 e9 b1 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    106f:	90                   	nop
+    1070:	f3 0f 1e fa          	endbr64
+    1074:	68 04 00 00 00       	push   0x4
+    1079:	f2 e9 a1 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    107f:	90                   	nop
+    1080:	f3 0f 1e fa          	endbr64
+    1084:	68 05 00 00 00       	push   0x5
+    1089:	f2 e9 91 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    108f:	90                   	nop
+    1090:	f3 0f 1e fa          	endbr64
+    1094:	68 06 00 00 00       	push   0x6
+    1099:	f2 e9 81 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    109f:	90                   	nop
+    10a0:	f3 0f 1e fa          	endbr64
+    10a4:	68 07 00 00 00       	push   0x7
+    10a9:	f2 e9 71 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    10af:	90                   	nop
+    10b0:	f3 0f 1e fa          	endbr64
+    10b4:	68 08 00 00 00       	push   0x8
+    10b9:	f2 e9 61 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    10bf:	90                   	nop
+    10c0:	f3 0f 1e fa          	endbr64
+    10c4:	68 09 00 00 00       	push   0x9
+    10c9:	f2 e9 51 ff ff ff    	bnd jmp 1020 <_init+0x20>
+    10cf:	90                   	nop
+
+Disassembly of section .plt.got:
+
+00000000000010d0 <__cxa_finalize@plt>:
+    10d0:	f3 0f 1e fa          	endbr64
+    10d4:	f2 ff 25 1d 2f 00 00 	bnd jmp QWORD PTR [rip+0x2f1d]        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    10db:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+Disassembly of section .plt.sec:
+
+00000000000010e0 <free@plt>:
+    10e0:	f3 0f 1e fa          	endbr64
+    10e4:	f2 ff 25 9d 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e9d]        # 3f88 <free@GLIBC_2.2.5>
+    10eb:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+00000000000010f0 <puts@plt>:
+    10f0:	f3 0f 1e fa          	endbr64
+    10f4:	f2 ff 25 95 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e95]        # 3f90 <puts@GLIBC_2.2.5>
+    10fb:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001100 <__stack_chk_fail@plt>:
+    1100:	f3 0f 1e fa          	endbr64
+    1104:	f2 ff 25 8d 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e8d]        # 3f98 <__stack_chk_fail@GLIBC_2.4>
+    110b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001110 <setbuf@plt>:
+    1110:	f3 0f 1e fa          	endbr64
+    1114:	f2 ff 25 85 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e85]        # 3fa0 <setbuf@GLIBC_2.2.5>
+    111b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001120 <printf@plt>:
+    1120:	f3 0f 1e fa          	endbr64
+    1124:	f2 ff 25 7d 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e7d]        # 3fa8 <printf@GLIBC_2.2.5>
+    112b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001130 <read@plt>:
+    1130:	f3 0f 1e fa          	endbr64
+    1134:	f2 ff 25 75 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e75]        # 3fb0 <read@GLIBC_2.2.5>
+    113b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001140 <malloc@plt>:
+    1140:	f3 0f 1e fa          	endbr64
+    1144:	f2 ff 25 6d 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e6d]        # 3fb8 <malloc@GLIBC_2.2.5>
+    114b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001150 <setvbuf@plt>:
+    1150:	f3 0f 1e fa          	endbr64
+    1154:	f2 ff 25 65 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e65]        # 3fc0 <setvbuf@GLIBC_2.2.5>
+    115b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001160 <__isoc99_scanf@plt>:
+    1160:	f3 0f 1e fa          	endbr64
+    1164:	f2 ff 25 5d 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e5d]        # 3fc8 <__isoc99_scanf@GLIBC_2.7>
+    116b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001170 <exit@plt>:
+    1170:	f3 0f 1e fa          	endbr64
+    1174:	f2 ff 25 55 2e 00 00 	bnd jmp QWORD PTR [rip+0x2e55]        # 3fd0 <exit@GLIBC_2.2.5>
+    117b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+Disassembly of section .text:
+
+0000000000001180 <_start>:
+    1180:	f3 0f 1e fa          	endbr64
+    1184:	31 ed                	xor    ebp,ebp
+    1186:	49 89 d1             	mov    r9,rdx
+    1189:	5e                   	pop    rsi
+    118a:	48 89 e2             	mov    rdx,rsp
+    118d:	48 83 e4 f0          	and    rsp,0xfffffffffffffff0
+    1191:	50                   	push   rax
+    1192:	54                   	push   rsp
+    1193:	45 31 c0             	xor    r8d,r8d
+    1196:	31 c9                	xor    ecx,ecx
+    1198:	48 8d 3d a3 05 00 00 	lea    rdi,[rip+0x5a3]        # 1742 <main>
+    119f:	ff 15 33 2e 00 00    	call   QWORD PTR [rip+0x2e33]        # 3fd8 <__libc_start_main@GLIBC_2.34>
+    11a5:	f4                   	hlt
+    11a6:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+    11ad:	00 00 00 
+
+00000000000011b0 <deregister_tm_clones>:
+    11b0:	48 8d 3d 59 2e 00 00 	lea    rdi,[rip+0x2e59]        # 4010 <__TMC_END__>
+    11b7:	48 8d 05 52 2e 00 00 	lea    rax,[rip+0x2e52]        # 4010 <__TMC_END__>
+    11be:	48 39 f8             	cmp    rax,rdi
+    11c1:	74 15                	je     11d8 <deregister_tm_clones+0x28>
+    11c3:	48 8b 05 16 2e 00 00 	mov    rax,QWORD PTR [rip+0x2e16]        # 3fe0 <_ITM_deregisterTMCloneTable@Base>
+    11ca:	48 85 c0             	test   rax,rax
+    11cd:	74 09                	je     11d8 <deregister_tm_clones+0x28>
+    11cf:	ff e0                	jmp    rax
+    11d1:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+    11d8:	c3                   	ret
+    11d9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+
+00000000000011e0 <register_tm_clones>:
+    11e0:	48 8d 3d 29 2e 00 00 	lea    rdi,[rip+0x2e29]        # 4010 <__TMC_END__>
+    11e7:	48 8d 35 22 2e 00 00 	lea    rsi,[rip+0x2e22]        # 4010 <__TMC_END__>
+    11ee:	48 29 fe             	sub    rsi,rdi
+    11f1:	48 89 f0             	mov    rax,rsi
+    11f4:	48 c1 ee 3f          	shr    rsi,0x3f
+    11f8:	48 c1 f8 03          	sar    rax,0x3
+    11fc:	48 01 c6             	add    rsi,rax
+    11ff:	48 d1 fe             	sar    rsi,1
+    1202:	74 14                	je     1218 <register_tm_clones+0x38>
+    1204:	48 8b 05 e5 2d 00 00 	mov    rax,QWORD PTR [rip+0x2de5]        # 3ff0 <_ITM_registerTMCloneTable@Base>
+    120b:	48 85 c0             	test   rax,rax
+    120e:	74 08                	je     1218 <register_tm_clones+0x38>
+    1210:	ff e0                	jmp    rax
+    1212:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+    1218:	c3                   	ret
+    1219:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+
+0000000000001220 <__do_global_dtors_aux>:
+    1220:	f3 0f 1e fa          	endbr64
+    1224:	80 3d 1d 2e 00 00 00 	cmp    BYTE PTR [rip+0x2e1d],0x0        # 4048 <completed.0>
+    122b:	75 2b                	jne    1258 <__do_global_dtors_aux+0x38>
+    122d:	55                   	push   rbp
+    122e:	48 83 3d c2 2d 00 00 	cmp    QWORD PTR [rip+0x2dc2],0x0        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    1235:	00 
+    1236:	48 89 e5             	mov    rbp,rsp
+    1239:	74 0c                	je     1247 <__do_global_dtors_aux+0x27>
+    123b:	48 8b 3d c6 2d 00 00 	mov    rdi,QWORD PTR [rip+0x2dc6]        # 4008 <__dso_handle>
+    1242:	e8 89 fe ff ff       	call   10d0 <__cxa_finalize@plt>
+    1247:	e8 64 ff ff ff       	call   11b0 <deregister_tm_clones>
+    124c:	c6 05 f5 2d 00 00 01 	mov    BYTE PTR [rip+0x2df5],0x1        # 4048 <completed.0>
+    1253:	5d                   	pop    rbp
+    1254:	c3                   	ret
+    1255:	0f 1f 00             	nop    DWORD PTR [rax]
+    1258:	c3                   	ret
+    1259:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+
+0000000000001260 <frame_dummy>:
+    1260:	f3 0f 1e fa          	endbr64
+    1264:	e9 77 ff ff ff       	jmp    11e0 <register_tm_clones>
+
+0000000000001269 <setup>:
+    1269:	f3 0f 1e fa          	endbr64
+    126d:	55                   	push   rbp
+    126e:	48 89 e5             	mov    rbp,rsp
+    1271:	48 8b 05 a8 2d 00 00 	mov    rax,QWORD PTR [rip+0x2da8]        # 4020 <stdout@GLIBC_2.2.5>
+    1278:	b9 00 00 00 00       	mov    ecx,0x0
+    127d:	ba 02 00 00 00       	mov    edx,0x2
+    1282:	be 00 00 00 00       	mov    esi,0x0
+    1287:	48 89 c7             	mov    rdi,rax
+    128a:	e8 c1 fe ff ff       	call   1150 <setvbuf@plt>
+    128f:	48 8b 05 9a 2d 00 00 	mov    rax,QWORD PTR [rip+0x2d9a]        # 4030 <stdin@GLIBC_2.2.5>
+    1296:	be 00 00 00 00       	mov    esi,0x0
+    129b:	48 89 c7             	mov    rdi,rax
+    129e:	e8 6d fe ff ff       	call   1110 <setbuf@plt>
+    12a3:	48 8b 05 96 2d 00 00 	mov    rax,QWORD PTR [rip+0x2d96]        # 4040 <stderr@GLIBC_2.2.5>
+    12aa:	be 00 00 00 00       	mov    esi,0x0
+    12af:	48 89 c7             	mov    rdi,rax
+    12b2:	e8 59 fe ff ff       	call   1110 <setbuf@plt>
+    12b7:	90                   	nop
+    12b8:	5d                   	pop    rbp
+    12b9:	c3                   	ret
+
+00000000000012ba <take_a_big_poop>:
+    12ba:	f3 0f 1e fa          	endbr64
+    12be:	55                   	push   rbp
+    12bf:	48 89 e5             	mov    rbp,rsp
+    12c2:	48 83 ec 10          	sub    rsp,0x10
+    12c6:	8b 05 94 2d 00 00    	mov    eax,DWORD PTR [rip+0x2d94]        # 4060 <poops_used>
+    12cc:	83 f8 04             	cmp    eax,0x4
+    12cf:	7e 11                	jle    12e2 <take_a_big_poop+0x28>
+    12d1:	48 8d 05 34 0d 00 00 	lea    rax,[rip+0xd34]        # 200c <MAX_MESSES+0x4>
+    12d8:	48 89 c7             	mov    rdi,rax
+    12db:	e8 10 fe ff ff       	call   10f0 <puts@plt>
+    12e0:	eb 7d                	jmp    135f <take_a_big_poop+0xa5>
+    12e2:	bf 00 08 00 00       	mov    edi,0x800
+    12e7:	e8 54 fe ff ff       	call   1140 <malloc@plt>
+    12ec:	48 89 45 f0          	mov    QWORD PTR [rbp-0x10],rax
+    12f0:	bf 10 00 00 00       	mov    edi,0x10
+    12f5:	e8 46 fe ff ff       	call   1140 <malloc@plt>
+    12fa:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+    12fe:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1302:	48 c7 00 00 08 00 00 	mov    QWORD PTR [rax],0x800
+    1309:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    130d:	48 8b 55 f0          	mov    rdx,QWORD PTR [rbp-0x10]
+    1311:	48 89 50 08          	mov    QWORD PTR [rax+0x8],rdx
+    1315:	8b 05 45 2d 00 00    	mov    eax,DWORD PTR [rip+0x2d45]        # 4060 <poops_used>
+    131b:	89 c6                	mov    esi,eax
+    131d:	48 8d 05 06 0d 00 00 	lea    rax,[rip+0xd06]        # 202a <MAX_MESSES+0x22>
+    1324:	48 89 c7             	mov    rdi,rax
+    1327:	b8 00 00 00 00       	mov    eax,0x0
+    132c:	e8 ef fd ff ff       	call   1120 <printf@plt>
+    1331:	8b 05 29 2d 00 00    	mov    eax,DWORD PTR [rip+0x2d29]        # 4060 <poops_used>
+    1337:	48 98                	cdqe
+    1339:	48 8d 0c c5 00 00 00 	lea    rcx,[rax*8+0x0]
+    1340:	00 
+    1341:	48 8d 15 38 2d 00 00 	lea    rdx,[rip+0x2d38]        # 4080 <poopsies>
+    1348:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    134c:	48 89 04 11          	mov    QWORD PTR [rcx+rdx*1],rax
+    1350:	8b 05 0a 2d 00 00    	mov    eax,DWORD PTR [rip+0x2d0a]        # 4060 <poops_used>
+    1356:	83 c0 01             	add    eax,0x1
+    1359:	89 05 01 2d 00 00    	mov    DWORD PTR [rip+0x2d01],eax        # 4060 <poops_used>
+    135f:	c9                   	leave
+    1360:	c3                   	ret
+
+0000000000001361 <clear_poop>:
+    1361:	f3 0f 1e fa          	endbr64
+    1365:	55                   	push   rbp
+    1366:	48 89 e5             	mov    rbp,rsp
+    1369:	48 83 ec 20          	sub    rsp,0x20
+    136d:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+    1374:	00 00 
+    1376:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+    137a:	31 c0                	xor    eax,eax
+    137c:	48 8d 05 c5 0c 00 00 	lea    rax,[rip+0xcc5]        # 2048 <MAX_MESSES+0x40>
+    1383:	48 89 c7             	mov    rdi,rax
+    1386:	e8 65 fd ff ff       	call   10f0 <puts@plt>
+    138b:	48 8d 45 ec          	lea    rax,[rbp-0x14]
+    138f:	48 89 c6             	mov    rsi,rax
+    1392:	48 8d 05 d3 0c 00 00 	lea    rax,[rip+0xcd3]        # 206c <MAX_MESSES+0x64>
+    1399:	48 89 c7             	mov    rdi,rax
+    139c:	b8 00 00 00 00       	mov    eax,0x0
+    13a1:	e8 ba fd ff ff       	call   1160 <__isoc99_scanf@plt>
+    13a6:	8b 45 ec             	mov    eax,DWORD PTR [rbp-0x14]
+    13a9:	85 c0                	test   eax,eax
+    13ab:	78 08                	js     13b5 <clear_poop+0x54>
+    13ad:	8b 45 ec             	mov    eax,DWORD PTR [rbp-0x14]
+    13b0:	83 f8 04             	cmp    eax,0x4
+    13b3:	7e 11                	jle    13c6 <clear_poop+0x65>
+    13b5:	48 8d 05 b3 0c 00 00 	lea    rax,[rip+0xcb3]        # 206f <MAX_MESSES+0x67>
+    13bc:	48 89 c7             	mov    rdi,rax
+    13bf:	e8 2c fd ff ff       	call   10f0 <puts@plt>
+    13c4:	eb 5e                	jmp    1424 <clear_poop+0xc3>
+    13c6:	8b 45 ec             	mov    eax,DWORD PTR [rbp-0x14]
+    13c9:	48 98                	cdqe
+    13cb:	48 8d 14 c5 00 00 00 	lea    rdx,[rax*8+0x0]
+    13d2:	00 
+    13d3:	48 8d 05 a6 2c 00 00 	lea    rax,[rip+0x2ca6]        # 4080 <poopsies>
+    13da:	48 8b 04 02          	mov    rax,QWORD PTR [rdx+rax*1]
+    13de:	48 89 45 f0          	mov    QWORD PTR [rbp-0x10],rax
+    13e2:	48 83 7d f0 00       	cmp    QWORD PTR [rbp-0x10],0x0
+    13e7:	75 11                	jne    13fa <clear_poop+0x99>
+    13e9:	48 8d 05 8e 0c 00 00 	lea    rax,[rip+0xc8e]        # 207e <MAX_MESSES+0x76>
+    13f0:	48 89 c7             	mov    rdi,rax
+    13f3:	e8 f8 fc ff ff       	call   10f0 <puts@plt>
+    13f8:	eb 2a                	jmp    1424 <clear_poop+0xc3>
+    13fa:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+    13fe:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    1402:	48 89 c7             	mov    rdi,rax
+    1405:	e8 d6 fc ff ff       	call   10e0 <free@plt>
+    140a:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+    140e:	48 c7 00 00 00 00 00 	mov    QWORD PTR [rax],0x0
+    1415:	48 8d 05 7a 0c 00 00 	lea    rax,[rip+0xc7a]        # 2096 <MAX_MESSES+0x8e>
+    141c:	48 89 c7             	mov    rdi,rax
+    141f:	e8 cc fc ff ff       	call   10f0 <puts@plt>
+    1424:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1428:	64 48 2b 04 25 28 00 	sub    rax,QWORD PTR fs:0x28
+    142f:	00 00 
+    1431:	74 05                	je     1438 <clear_poop+0xd7>
+    1433:	e8 c8 fc ff ff       	call   1100 <__stack_chk_fail@plt>
+    1438:	c9                   	leave
+    1439:	c3                   	ret
+
+000000000000143a <view_poop>:
+    143a:	f3 0f 1e fa          	endbr64
+    143e:	55                   	push   rbp
+    143f:	48 89 e5             	mov    rbp,rsp
+    1442:	48 83 ec 20          	sub    rsp,0x20
+    1446:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+    144d:	00 00 
+    144f:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+    1453:	31 c0                	xor    eax,eax
+    1455:	48 8d 05 44 0c 00 00 	lea    rax,[rip+0xc44]        # 20a0 <MAX_MESSES+0x98>
+    145c:	48 89 c7             	mov    rdi,rax
+    145f:	e8 8c fc ff ff       	call   10f0 <puts@plt>
+    1464:	48 8d 45 ec          	lea    rax,[rbp-0x14]
+    1468:	48 89 c6             	mov    rsi,rax
+    146b:	48 8d 05 fa 0b 00 00 	lea    rax,[rip+0xbfa]        # 206c <MAX_MESSES+0x64>
+    1472:	48 89 c7             	mov    rdi,rax
+    1475:	b8 00 00 00 00       	mov    eax,0x0
+    147a:	e8 e1 fc ff ff       	call   1160 <__isoc99_scanf@plt>
+    147f:	8b 45 ec             	mov    eax,DWORD PTR [rbp-0x14]
+    1482:	85 c0                	test   eax,eax
+    1484:	78 08                	js     148e <view_poop+0x54>
+    1486:	8b 45 ec             	mov    eax,DWORD PTR [rbp-0x14]
+    1489:	83 f8 04             	cmp    eax,0x4
+    148c:	7e 11                	jle    149f <view_poop+0x65>
+    148e:	48 8d 05 da 0b 00 00 	lea    rax,[rip+0xbda]        # 206f <MAX_MESSES+0x67>
+    1495:	48 89 c7             	mov    rdi,rax
+    1498:	e8 53 fc ff ff       	call   10f0 <puts@plt>
+    149d:	eb 79                	jmp    1518 <view_poop+0xde>
+    149f:	8b 45 ec             	mov    eax,DWORD PTR [rbp-0x14]
+    14a2:	48 98                	cdqe
+    14a4:	48 8d 14 c5 00 00 00 	lea    rdx,[rax*8+0x0]
+    14ab:	00 
+    14ac:	48 8d 05 cd 2b 00 00 	lea    rax,[rip+0x2bcd]        # 4080 <poopsies>
+    14b3:	48 8b 04 02          	mov    rax,QWORD PTR [rdx+rax*1]
+    14b7:	48 89 45 f0          	mov    QWORD PTR [rbp-0x10],rax
+    14bb:	48 83 7d f0 00       	cmp    QWORD PTR [rbp-0x10],0x0
+    14c0:	75 11                	jne    14d3 <view_poop+0x99>
+    14c2:	48 8d 05 b5 0b 00 00 	lea    rax,[rip+0xbb5]        # 207e <MAX_MESSES+0x76>
+    14c9:	48 89 c7             	mov    rdi,rax
+    14cc:	e8 1f fc ff ff       	call   10f0 <puts@plt>
+    14d1:	eb 45                	jmp    1518 <view_poop+0xde>
+    14d3:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+    14d7:	48 8b 50 08          	mov    rdx,QWORD PTR [rax+0x8]
+    14db:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+    14df:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    14e2:	48 89 c6             	mov    rsi,rax
+    14e5:	48 8d 05 dc 0b 00 00 	lea    rax,[rip+0xbdc]        # 20c8 <MAX_MESSES+0xc0>
+    14ec:	48 89 c7             	mov    rdi,rax
+    14ef:	b8 00 00 00 00       	mov    eax,0x0
+    14f4:	e8 27 fc ff ff       	call   1120 <printf@plt>
+    14f9:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+    14fd:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    1501:	48 89 c6             	mov    rsi,rax
+    1504:	48 8d 05 ea 0b 00 00 	lea    rax,[rip+0xbea]        # 20f5 <MAX_MESSES+0xed>
+    150b:	48 89 c7             	mov    rdi,rax
+    150e:	b8 00 00 00 00       	mov    eax,0x0
+    1513:	e8 08 fc ff ff       	call   1120 <printf@plt>
+    1518:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    151c:	64 48 2b 04 25 28 00 	sub    rax,QWORD PTR fs:0x28
+    1523:	00 00 
+    1525:	74 05                	je     152c <view_poop+0xf2>
+    1527:	e8 d4 fb ff ff       	call   1100 <__stack_chk_fail@plt>
+    152c:	c9                   	leave
+    152d:	c3                   	ret
+
+000000000000152e <mess_with_poop>:
+    152e:	f3 0f 1e fa          	endbr64
+    1532:	55                   	push   rbp
+    1533:	48 89 e5             	mov    rbp,rsp
+    1536:	48 83 ec 30          	sub    rsp,0x30
+    153a:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+    1541:	00 00 
+    1543:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+    1547:	31 c0                	xor    eax,eax
+    1549:	8b 05 15 2b 00 00    	mov    eax,DWORD PTR [rip+0x2b15]        # 4064 <messes_used>
+    154f:	ba 02 00 00 00       	mov    edx,0x2
+    1554:	39 d0                	cmp    eax,edx
+    1556:	7c 19                	jl     1571 <mess_with_poop+0x43>
+    1558:	48 8d 05 b1 0b 00 00 	lea    rax,[rip+0xbb1]        # 2110 <MAX_MESSES+0x108>
+    155f:	48 89 c7             	mov    rdi,rax
+    1562:	e8 89 fb ff ff       	call   10f0 <puts@plt>
+    1567:	bf 00 00 00 00       	mov    edi,0x0
+    156c:	e8 ff fb ff ff       	call   1170 <exit@plt>
+    1571:	8b 05 ed 2a 00 00    	mov    eax,DWORD PTR [rip+0x2aed]        # 4064 <messes_used>
+    1577:	83 c0 01             	add    eax,0x1
+    157a:	89 05 e4 2a 00 00    	mov    DWORD PTR [rip+0x2ae4],eax        # 4064 <messes_used>
+    1580:	48 8d 05 d9 0b 00 00 	lea    rax,[rip+0xbd9]        # 2160 <MAX_MESSES+0x158>
+    1587:	48 89 c7             	mov    rdi,rax
+    158a:	e8 61 fb ff ff       	call   10f0 <puts@plt>
+    158f:	48 8d 05 02 0c 00 00 	lea    rax,[rip+0xc02]        # 2198 <MAX_MESSES+0x190>
+    1596:	48 89 c7             	mov    rdi,rax
+    1599:	e8 52 fb ff ff       	call   10f0 <puts@plt>
+    159e:	48 8d 45 d4          	lea    rax,[rbp-0x2c]
+    15a2:	48 89 c6             	mov    rsi,rax
+    15a5:	48 8d 05 c0 0a 00 00 	lea    rax,[rip+0xac0]        # 206c <MAX_MESSES+0x64>
+    15ac:	48 89 c7             	mov    rdi,rax
+    15af:	b8 00 00 00 00       	mov    eax,0x0
+    15b4:	e8 a7 fb ff ff       	call   1160 <__isoc99_scanf@plt>
+    15b9:	8b 45 d4             	mov    eax,DWORD PTR [rbp-0x2c]
+    15bc:	85 c0                	test   eax,eax
+    15be:	78 08                	js     15c8 <mess_with_poop+0x9a>
+    15c0:	8b 45 d4             	mov    eax,DWORD PTR [rbp-0x2c]
+    15c3:	83 f8 04             	cmp    eax,0x4
+    15c6:	7e 14                	jle    15dc <mess_with_poop+0xae>
+    15c8:	48 8d 05 a0 0a 00 00 	lea    rax,[rip+0xaa0]        # 206f <MAX_MESSES+0x67>
+    15cf:	48 89 c7             	mov    rdi,rax
+    15d2:	e8 19 fb ff ff       	call   10f0 <puts@plt>
+    15d7:	e9 d7 00 00 00       	jmp    16b3 <mess_with_poop+0x185>
+    15dc:	8b 45 d4             	mov    eax,DWORD PTR [rbp-0x2c]
+    15df:	48 98                	cdqe
+    15e1:	48 8d 14 c5 00 00 00 	lea    rdx,[rax*8+0x0]
+    15e8:	00 
+    15e9:	48 8d 05 90 2a 00 00 	lea    rax,[rip+0x2a90]        # 4080 <poopsies>
+    15f0:	48 8b 04 02          	mov    rax,QWORD PTR [rdx+rax*1]
+    15f4:	48 89 45 e0          	mov    QWORD PTR [rbp-0x20],rax
+    15f8:	48 83 7d e0 00       	cmp    QWORD PTR [rbp-0x20],0x0
+    15fd:	75 14                	jne    1613 <mess_with_poop+0xe5>
+    15ff:	48 8d 05 78 0a 00 00 	lea    rax,[rip+0xa78]        # 207e <MAX_MESSES+0x76>
+    1606:	48 89 c7             	mov    rdi,rax
+    1609:	e8 e2 fa ff ff       	call   10f0 <puts@plt>
+    160e:	e9 a0 00 00 00       	jmp    16b3 <mess_with_poop+0x185>
+    1613:	48 8b 45 e0          	mov    rax,QWORD PTR [rbp-0x20]
+    1617:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    161a:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+    161e:	48 8d 05 9b 0b 00 00 	lea    rax,[rip+0xb9b]        # 21c0 <MAX_MESSES+0x1b8>
+    1625:	48 89 c7             	mov    rdi,rax
+    1628:	e8 c3 fa ff ff       	call   10f0 <puts@plt>
+    162d:	48 8d 45 d8          	lea    rax,[rbp-0x28]
+    1631:	48 89 c6             	mov    rsi,rax
+    1634:	48 8d 05 ba 0b 00 00 	lea    rax,[rip+0xbba]        # 21f5 <MAX_MESSES+0x1ed>
+    163b:	48 89 c7             	mov    rdi,rax
+    163e:	b8 00 00 00 00       	mov    eax,0x0
+    1643:	e8 18 fb ff ff       	call   1160 <__isoc99_scanf@plt>
+    1648:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+    164c:	48 85 c0             	test   rax,rax
+    164f:	78 0b                	js     165c <mess_with_poop+0x12e>
+    1651:	8b 45 d4             	mov    eax,DWORD PTR [rbp-0x2c]
+    1654:	48 98                	cdqe
+    1656:	48 39 45 e8          	cmp    QWORD PTR [rbp-0x18],rax
+    165a:	7f 11                	jg     166d <mess_with_poop+0x13f>
+    165c:	48 8d 05 96 0b 00 00 	lea    rax,[rip+0xb96]        # 21f9 <MAX_MESSES+0x1f1>
+    1663:	48 89 c7             	mov    rdi,rax
+    1666:	e8 85 fa ff ff       	call   10f0 <puts@plt>
+    166b:	eb 46                	jmp    16b3 <mess_with_poop+0x185>
+    166d:	48 8b 45 e0          	mov    rax,QWORD PTR [rbp-0x20]
+    1671:	48 8b 50 08          	mov    rdx,QWORD PTR [rax+0x8]
+    1675:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+    1679:	48 01 d0             	add    rax,rdx
+    167c:	48 89 45 f0          	mov    QWORD PTR [rbp-0x10],rax
+    1680:	48 8d 05 82 0b 00 00 	lea    rax,[rip+0xb82]        # 2209 <MAX_MESSES+0x201>
+    1687:	48 89 c7             	mov    rdi,rax
+    168a:	e8 61 fa ff ff       	call   10f0 <puts@plt>
+    168f:	48 8b 55 e8          	mov    rdx,QWORD PTR [rbp-0x18]
+    1693:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+    1697:	48 89 c6             	mov    rsi,rax
+    169a:	bf 00 00 00 00       	mov    edi,0x0
+    169f:	e8 8c fa ff ff       	call   1130 <read@plt>
+    16a4:	48 8d 05 7d 0b 00 00 	lea    rax,[rip+0xb7d]        # 2228 <MAX_MESSES+0x220>
+    16ab:	48 89 c7             	mov    rdi,rax
+    16ae:	e8 3d fa ff ff       	call   10f0 <puts@plt>
+    16b3:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    16b7:	64 48 2b 04 25 28 00 	sub    rax,QWORD PTR fs:0x28
+    16be:	00 00 
+    16c0:	74 05                	je     16c7 <mess_with_poop+0x199>
+    16c2:	e8 39 fa ff ff       	call   1100 <__stack_chk_fail@plt>
+    16c7:	c9                   	leave
+    16c8:	c3                   	ret
+
+00000000000016c9 <banner>:
+    16c9:	f3 0f 1e fa          	endbr64
+    16cd:	55                   	push   rbp
+    16ce:	48 89 e5             	mov    rbp,rsp
+    16d1:	48 8d 05 7e 0b 00 00 	lea    rax,[rip+0xb7e]        # 2256 <MAX_MESSES+0x24e>
+    16d8:	48 89 c7             	mov    rdi,rax
+    16db:	e8 10 fa ff ff       	call   10f0 <puts@plt>
+    16e0:	48 8d 05 8a 0b 00 00 	lea    rax,[rip+0xb8a]        # 2271 <MAX_MESSES+0x269>
+    16e7:	48 89 c7             	mov    rdi,rax
+    16ea:	e8 01 fa ff ff       	call   10f0 <puts@plt>
+    16ef:	48 8d 05 89 0b 00 00 	lea    rax,[rip+0xb89]        # 227f <MAX_MESSES+0x277>
+    16f6:	48 89 c7             	mov    rdi,rax
+    16f9:	e8 f2 f9 ff ff       	call   10f0 <puts@plt>
+    16fe:	48 8d 05 8d 0b 00 00 	lea    rax,[rip+0xb8d]        # 2292 <MAX_MESSES+0x28a>
+    1705:	48 89 c7             	mov    rdi,rax
+    1708:	e8 e3 f9 ff ff       	call   10f0 <puts@plt>
+    170d:	48 8d 05 8b 0b 00 00 	lea    rax,[rip+0xb8b]        # 229f <MAX_MESSES+0x297>
+    1714:	48 89 c7             	mov    rdi,rax
+    1717:	e8 d4 f9 ff ff       	call   10f0 <puts@plt>
+    171c:	48 8d 05 8e 0b 00 00 	lea    rax,[rip+0xb8e]        # 22b1 <MAX_MESSES+0x2a9>
+    1723:	48 89 c7             	mov    rdi,rax
+    1726:	e8 c5 f9 ff ff       	call   10f0 <puts@plt>
+    172b:	48 8d 05 93 0b 00 00 	lea    rax,[rip+0xb93]        # 22c5 <MAX_MESSES+0x2bd>
+    1732:	48 89 c7             	mov    rdi,rax
+    1735:	b8 00 00 00 00       	mov    eax,0x0
+    173a:	e8 e1 f9 ff ff       	call   1120 <printf@plt>
+    173f:	90                   	nop
+    1740:	5d                   	pop    rbp
+    1741:	c3                   	ret
+
+0000000000001742 <main>:
+    1742:	f3 0f 1e fa          	endbr64
+    1746:	55                   	push   rbp
+    1747:	48 89 e5             	mov    rbp,rsp
+    174a:	48 83 ec 10          	sub    rsp,0x10
+    174e:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+    1755:	00 00 
+    1757:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+    175b:	31 c0                	xor    eax,eax
+    175d:	b8 00 00 00 00       	mov    eax,0x0
+    1762:	e8 02 fb ff ff       	call   1269 <setup>
+    1767:	48 8d 05 5a 0b 00 00 	lea    rax,[rip+0xb5a]        # 22c8 <MAX_MESSES+0x2c0>
+    176e:	48 89 c7             	mov    rdi,rax
+    1771:	e8 7a f9 ff ff       	call   10f0 <puts@plt>
+    1776:	b8 00 00 00 00       	mov    eax,0x0
+    177b:	e8 49 ff ff ff       	call   16c9 <banner>
+    1780:	48 8d 45 f4          	lea    rax,[rbp-0xc]
+    1784:	48 89 c6             	mov    rsi,rax
+    1787:	48 8d 05 51 0b 00 00 	lea    rax,[rip+0xb51]        # 22df <MAX_MESSES+0x2d7>
+    178e:	48 89 c7             	mov    rdi,rax
+    1791:	b8 00 00 00 00       	mov    eax,0x0
+    1796:	e8 c5 f9 ff ff       	call   1160 <__isoc99_scanf@plt>
+    179b:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+    179e:	83 f8 01             	cmp    eax,0x1
+    17a1:	75 0c                	jne    17af <main+0x6d>
+    17a3:	b8 00 00 00 00       	mov    eax,0x0
+    17a8:	e8 b4 fb ff ff       	call   1361 <clear_poop>
+    17ad:	eb c7                	jmp    1776 <main+0x34>
+    17af:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+    17b2:	83 f8 02             	cmp    eax,0x2
+    17b5:	75 0c                	jne    17c3 <main+0x81>
+    17b7:	b8 00 00 00 00       	mov    eax,0x0
+    17bc:	e8 f9 fa ff ff       	call   12ba <take_a_big_poop>
+    17c1:	eb b3                	jmp    1776 <main+0x34>
+    17c3:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+    17c6:	83 f8 03             	cmp    eax,0x3
+    17c9:	75 0c                	jne    17d7 <main+0x95>
+    17cb:	b8 00 00 00 00       	mov    eax,0x0
+    17d0:	e8 65 fc ff ff       	call   143a <view_poop>
+    17d5:	eb 9f                	jmp    1776 <main+0x34>
+    17d7:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+    17da:	83 f8 04             	cmp    eax,0x4
+    17dd:	75 0c                	jne    17eb <main+0xa9>
+    17df:	b8 00 00 00 00       	mov    eax,0x0
+    17e4:	e8 45 fd ff ff       	call   152e <mess_with_poop>
+    17e9:	eb 8b                	jmp    1776 <main+0x34>
+    17eb:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+    17ee:	83 f8 05             	cmp    eax,0x5
+    17f1:	75 0a                	jne    17fd <main+0xbb>
+    17f3:	bf 00 00 00 00       	mov    edi,0x0
+    17f8:	e8 73 f9 ff ff       	call   1170 <exit@plt>
+    17fd:	48 8d 05 e4 0a 00 00 	lea    rax,[rip+0xae4]        # 22e8 <MAX_MESSES+0x2e0>
+    1804:	48 89 c7             	mov    rdi,rax
+    1807:	e8 e4 f8 ff ff       	call   10f0 <puts@plt>
+    180c:	e9 65 ff ff ff       	jmp    1776 <main+0x34>
+
+Disassembly of section .fini:
+
+0000000000001814 <_fini>:
+    1814:	f3 0f 1e fa          	endbr64
+    1818:	48 83 ec 08          	sub    rsp,0x8
+    181c:	48 83 c4 08          	add    rsp,0x8
+    1820:	c3                   	ret
+
+[+] Hexdump of .text section:
+
+dist-pwn-the-toilet/toilet:     file format elf64-x86-64
+
+Contents of section .text:
+ 1180 f30f1efa 31ed4989 d15e4889 e24883e4  ....1.I..^H..H..
+ 1190 f0505445 31c031c9 488d3da3 050000ff  .PTE1.1.H.=.....
+ 11a0 15332e00 00f4662e 0f1f8400 00000000  .3....f.........
+ 11b0 488d3d59 2e000048 8d05522e 00004839  H.=Y...H..R...H9
+ 11c0 f8741548 8b05162e 00004885 c07409ff  .t.H......H..t..
+ 11d0 e00f1f80 00000000 c30f1f80 00000000  ................
+ 11e0 488d3d29 2e000048 8d35222e 00004829  H.=)...H.5"...H)
+ 11f0 fe4889f0 48c1ee3f 48c1f803 4801c648  .H..H..?H...H..H
+ 1200 d1fe7414 488b05e5 2d000048 85c07408  ..t.H...-..H..t.
+ 1210 ffe0660f 1f440000 c30f1f80 00000000  ..f..D..........
+ 1220 f30f1efa 803d1d2e 00000075 2b554883  .....=.....u+UH.
+ 1230 3dc22d00 00004889 e5740c48 8b3dc62d  =.-...H..t.H.=.-
+ 1240 0000e889 feffffe8 64ffffff c605f52d  ........d......-
+ 1250 0000015d c30f1f00 c30f1f80 00000000  ...]............
+ 1260 f30f1efa e977ffff fff30f1e fa554889  .....w.......UH.
+ 1270 e5488b05 a82d0000 b9000000 00ba0200  .H...-..........
+ 1280 0000be00 00000048 89c7e8c1 feffff48  .......H.......H
+ 1290 8b059a2d 0000be00 00000048 89c7e86d  ...-.......H...m
+ 12a0 feffff48 8b05962d 0000be00 00000048  ...H...-.......H
+ 12b0 89c7e859 feffff90 5dc3f30f 1efa5548  ...Y....].....UH
+ 12c0 89e54883 ec108b05 942d0000 83f8047e  ..H......-.....~
+ 12d0 11488d05 340d0000 4889c7e8 10feffff  .H..4...H.......
+ 12e0 eb7dbf00 080000e8 54feffff 488945f0  .}......T...H.E.
+ 12f0 bf100000 00e846fe ffff4889 45f8488b  ......F...H.E.H.
+ 1300 45f848c7 00000800 00488b45 f8488b55  E.H......H.E.H.U
+ 1310 f0488950 088b0545 2d000089 c6488d05  .H.P...E-....H..
+ 1320 060d0000 4889c7b8 00000000 e8effdff  ....H...........
+ 1330 ff8b0529 2d000048 98488d0c c5000000  ...)-..H.H......
+ 1340 00488d15 382d0000 488b45f8 48890411  .H..8-..H.E.H...
+ 1350 8b050a2d 000083c0 01890501 2d0000c9  ...-........-...
+ 1360 c3f30f1e fa554889 e54883ec 2064488b  .....UH..H.. dH.
+ 1370 04252800 00004889 45f831c0 488d05c5  .%(...H.E.1.H...
+ 1380 0c000048 89c7e865 fdffff48 8d45ec48  ...H...e...H.E.H
+ 1390 89c6488d 05d30c00 004889c7 b8000000  ..H......H......
+ 13a0 00e8bafd ffff8b45 ec85c078 088b45ec  .......E...x..E.
+ 13b0 83f8047e 11488d05 b30c0000 4889c7e8  ...~.H......H...
+ 13c0 2cfdffff eb5e8b45 ec489848 8d14c500  ,....^.E.H.H....
+ 13d0 00000048 8d05a62c 0000488b 04024889  ...H...,..H...H.
+ 13e0 45f04883 7df00075 11488d05 8e0c0000  E.H.}..u.H......
+ 13f0 4889c7e8 f8fcffff eb2a488b 45f0488b  H........*H.E.H.
+ 1400 40084889 c7e8d6fc ffff488b 45f048c7  @.H.......H.E.H.
+ 1410 00000000 00488d05 7a0c0000 4889c7e8  .....H..z...H...
+ 1420 ccfcffff 488b45f8 64482b04 25280000  ....H.E.dH+.%(..
+ 1430 007405e8 c8fcffff c9c3f30f 1efa5548  .t............UH
+ 1440 89e54883 ec206448 8b042528 00000048  ..H.. dH..%(...H
+ 1450 8945f831 c0488d05 440c0000 4889c7e8  .E.1.H..D...H...
+ 1460 8cfcffff 488d45ec 4889c648 8d05fa0b  ....H.E.H..H....
+ 1470 00004889 c7b80000 0000e8e1 fcffff8b  ..H.............
+ 1480 45ec85c0 78088b45 ec83f804 7e11488d  E...x..E....~.H.
+ 1490 05da0b00 004889c7 e853fcff ffeb798b  .....H...S....y.
+ 14a0 45ec4898 488d14c5 00000000 488d05cd  E.H.H.......H...
+ 14b0 2b000048 8b040248 8945f048 837df000  +..H...H.E.H.}..
+ 14c0 7511488d 05b50b00 004889c7 e81ffcff  u.H......H......
+ 14d0 ffeb4548 8b45f048 8b500848 8b45f048  ..EH.E.H.P.H.E.H
+ 14e0 8b004889 c6488d05 dc0b0000 4889c7b8  ..H..H......H...
+ 14f0 00000000 e827fcff ff488b45 f0488b40  .....'...H.E.H.@
+ 1500 084889c6 488d05ea 0b000048 89c7b800  .H..H......H....
+ 1510 000000e8 08fcffff 488b45f8 64482b04  ........H.E.dH+.
+ 1520 25280000 007405e8 d4fbffff c9c3f30f  %(...t..........
+ 1530 1efa5548 89e54883 ec306448 8b042528  ..UH..H..0dH..%(
+ 1540 00000048 8945f831 c08b0515 2b0000ba  ...H.E.1....+...
+ 1550 02000000 39d07c19 488d05b1 0b000048  ....9.|.H......H
+ 1560 89c7e889 fbffffbf 00000000 e8fffbff  ................
+ 1570 ff8b05ed 2a000083 c0018905 e42a0000  ....*........*..
+ 1580 488d05d9 0b000048 89c7e861 fbffff48  H......H...a...H
+ 1590 8d05020c 00004889 c7e852fb ffff488d  ......H...R...H.
+ 15a0 45d44889 c6488d05 c00a0000 4889c7b8  E.H..H......H...
+ 15b0 00000000 e8a7fbff ff8b45d4 85c07808  ..........E...x.
+ 15c0 8b45d483 f8047e14 488d05a0 0a000048  .E....~.H......H
+ 15d0 89c7e819 fbffffe9 d7000000 8b45d448  .............E.H
+ 15e0 98488d14 c5000000 00488d05 902a0000  .H.......H...*..
+ 15f0 488b0402 488945e0 48837de0 00751448  H...H.E.H.}..u.H
+ 1600 8d05780a 00004889 c7e8e2fa ffffe9a0  ..x...H.........
+ 1610 00000048 8b45e048 8b004889 45e8488d  ...H.E.H..H.E.H.
+ 1620 059b0b00 004889c7 e8c3faff ff488d45  .....H.......H.E
+ 1630 d84889c6 488d05ba 0b000048 89c7b800  .H..H......H....
+ 1640 000000e8 18fbffff 488b45d8 4885c078  ........H.E.H..x
+ 1650 0b8b45d4 48984839 45e87f11 488d0596  ..E.H.H9E...H...
+ 1660 0b000048 89c7e885 faffffeb 46488b45  ...H........FH.E
+ 1670 e0488b50 08488b45 d84801d0 488945f0  .H.P.H.E.H..H.E.
+ 1680 488d0582 0b000048 89c7e861 faffff48  H......H...a...H
+ 1690 8b55e848 8b45f048 89c6bf00 000000e8  .U.H.E.H........
+ 16a0 8cfaffff 488d057d 0b000048 89c7e83d  ....H..}...H...=
+ 16b0 faffff48 8b45f864 482b0425 28000000  ...H.E.dH+.%(...
+ 16c0 7405e839 faffffc9 c3f30f1e fa554889  t..9.........UH.
+ 16d0 e5488d05 7e0b0000 4889c7e8 10faffff  .H..~...H.......
+ 16e0 488d058a 0b000048 89c7e801 faffff48  H......H.......H
+ 16f0 8d05890b 00004889 c7e8f2f9 ffff488d  ......H.......H.
+ 1700 058d0b00 004889c7 e8e3f9ff ff488d05  .....H.......H..
+ 1710 8b0b0000 4889c7e8 d4f9ffff 488d058e  ....H.......H...
+ 1720 0b000048 89c7e8c5 f9ffff48 8d05930b  ...H.......H....
+ 1730 00004889 c7b80000 0000e8e1 f9ffff90  ..H.............
+ 1740 5dc3f30f 1efa5548 89e54883 ec106448  ].....UH..H...dH
+ 1750 8b042528 00000048 8945f831 c0b80000  ..%(...H.E.1....
+ 1760 0000e802 fbffff48 8d055a0b 00004889  .......H..Z...H.
+ 1770 c7e87af9 ffffb800 000000e8 49ffffff  ..z.........I...
+ 1780 488d45f4 4889c648 8d05510b 00004889  H.E.H..H..Q...H.
+ 1790 c7b80000 0000e8c5 f9ffff8b 45f483f8  ............E...
+ 17a0 01750cb8 00000000 e8b4fbff ffebc78b  .u..............
+ 17b0 45f483f8 02750cb8 00000000 e8f9faff  E....u..........
+ 17c0 ffebb38b 45f483f8 03750cb8 00000000  ....E....u......
+ 17d0 e865fcff ffeb9f8b 45f483f8 04750cb8  .e......E....u..
+ 17e0 00000000 e845fdff ffeb8b8b 45f483f8  .....E......E...
+ 17f0 05750abf 00000000 e873f9ff ff488d05  .u.......s...H..
+ 1800 e40a0000 4889c7e8 e4f8ffff e965ffff  ....H........e..
+ 1810 ff                                   .               
+
+[+] ROP Gadgets:
+Gadgets information
+============================================================
+0x000000000000125b : add byte ptr [rax], 0 ; add byte ptr [rax], al ; endbr64 ; jmp 0x11e0
+0x00000000000011d3 : add byte ptr [rax], 0 ; add byte ptr [rax], al ; ret
+0x000000000000125c : add byte ptr [rax], al ; add byte ptr [rax], al ; endbr64 ; jmp 0x11e0
+0x00000000000011d4 : add byte ptr [rax], al ; add byte ptr [rax], al ; ret
+0x0000000000001036 : add byte ptr [rax], al ; add dl, dh ; jmp 0x1020
+0x0000000000001250 : add byte ptr [rax], al ; add dword ptr [rbp - 0x3d], ebx ; nop dword ptr [rax] ; ret
+0x000000000000125e : add byte ptr [rax], al ; endbr64 ; jmp 0x11e0
+0x000000000000135d : add byte ptr [rax], al ; leave ; ret
+0x00000000000011d6 : add byte ptr [rax], al ; ret
+0x000000000000100d : add byte ptr [rax], al ; test rax, rax ; je 0x1016 ; call rax
+0x00000000000011c8 : add byte ptr [rax], al ; test rax, rax ; je 0x11d8 ; jmp rax
+0x0000000000001209 : add byte ptr [rax], al ; test rax, rax ; je 0x1218 ; jmp rax
+0x0000000000001215 : add byte ptr [rax], r8b ; ret
+0x0000000000001430 : add byte ptr [rbp + rax - 0x18], dh ; enter -4, -1 ; leave ; ret
+0x0000000000001251 : add byte ptr [rcx], al ; pop rbp ; ret
+0x00000000000011c7 : add byte ptr cs:[rax], al ; test rax, rax ; je 0x11d8 ; jmp rax
+0x000000000000135e : add cl, cl ; ret
+0x0000000000001038 : add dl, dh ; jmp 0x1020
+0x0000000000001252 : add dword ptr [rbp - 0x3d], ebx ; nop dword ptr [rax] ; ret
+0x0000000000001358 : add dword ptr [rcx + 0x2d0105], ecx ; add cl, cl ; ret
+0x000000000000135a : add eax, 0x2d01 ; leave ; ret
+0x0000000000001085 : add eax, 0xf2000000 ; jmp 0x1020
+0x00000000000016c1 : add eax, 0xfffa39e8 ; dec ecx ; ret
+0x0000000000001526 : add eax, 0xfffbd4e8 ; dec ecx ; ret
+0x0000000000001432 : add eax, 0xfffcc8e8 ; dec ecx ; ret
+0x0000000000001017 : add esp, 8 ; ret
+0x0000000000001016 : add rsp, 8 ; ret
+0x00000000000012b6 : call qword ptr [rax + 0xff3c35d]
+0x000000000000103e : call qword ptr [rax - 0x5e1f00d]
+0x0000000000001014 : call rax
+0x0000000000001263 : cli ; jmp 0x11e0
+0x0000000000001817 : cli ; sub rsp, 8 ; add rsp, 8 ; ret
+0x000000000000124e : cmc ; sub eax, 0x5d010000 ; ret
+0x0000000000001437 : dec ecx ; ret
+0x0000000000001260 : endbr64 ; jmp 0x11e0
+0x0000000000001434 : enter -4, -1 ; leave ; ret
+0x000000000000100b : fldcw word ptr [rdi] ; add byte ptr [rax], al ; test rax, rax ; je 0x1016 ; call rax
+0x0000000000001207 : in eax, 0x2d ; add byte ptr [rax], al ; test rax, rax ; je 0x1218 ; jmp rax
+0x0000000000001012 : je 0x1016 ; call rax
+0x00000000000011cd : je 0x11d8 ; jmp rax
+0x000000000000120e : je 0x1218 ; jmp rax
+0x000000000000103a : jmp 0x1020
+0x0000000000001264 : jmp 0x11e0
+0x00000000000012e0 : jmp 0x135f
+0x00000000000013c4 : jmp 0x1424
+0x000000000000149d : jmp 0x1518
+0x000000000000166b : jmp 0x16b3
+0x00000000000017ad : jmp 0x1776
+0x00000000000011cf : jmp rax
+0x000000000000135f : leave ; ret
+0x0000000000001211 : loopne 0x1279 ; nop dword ptr [rax + rax] ; ret
+0x000000000000124c : mov byte ptr [rip + 0x2df5], 1 ; pop rbp ; ret
+0x0000000000001359 : mov dword ptr [rip + 0x2d01], eax ; leave ; ret
+0x00000000000012b7 : nop ; pop rbp ; ret
+0x0000000000001213 : nop dword ptr [rax + rax] ; ret
+0x00000000000011d1 : nop dword ptr [rax] ; ret
+0x0000000000001212 : nop word ptr [rax + rax] ; ret
+0x000000000000120f : or bh, bh ; loopne 0x1279 ; nop dword ptr [rax + rax] ; ret
+0x0000000000001253 : pop rbp ; ret
+0x000000000000101a : ret
+0x0000000000001231 : ret 0x2d
+0x0000000000001357 : rol byte ptr [rcx], 0x89 ; add eax, 0x2d01 ; leave ; ret
+0x0000000000001011 : sal byte ptr [rdx + rax - 1], 0xd0 ; add rsp, 8 ; ret
+0x000000000000105b : sar edi, 0xff ; call qword ptr [rax - 0x5e1f00d]
+0x000000000000124f : sub eax, 0x5d010000 ; ret
+0x0000000000001819 : sub esp, 8 ; add rsp, 8 ; ret
+0x0000000000001818 : sub rsp, 8 ; add rsp, 8 ; ret
+0x0000000000001010 : test eax, eax ; je 0x1016 ; call rax
+0x00000000000011cb : test eax, eax ; je 0x11d8 ; jmp rax
+0x000000000000120c : test eax, eax ; je 0x1218 ; jmp rax
+0x000000000000100f : test rax, rax ; je 0x1016 ; call rax
+0x00000000000011ca : test rax, rax ; je 0x11d8 ; jmp rax
+0x000000000000120b : test rax, rax ; je 0x1218 ; jmp rax
+
+Unique gadgets found: 73
+
+[+] ROP Pop/Ret Gadgets:
+Gadgets information
+============================================================
+0x0000000000001253 : pop rbp ; ret
+0x000000000000101a : ret
+0x0000000000001231 : ret 0x2d
+
+Unique gadgets found: 3
+
+[+] Syscall Gadgets:
+Gadgets information
+============================================================
+
+Unique gadgets found: 0
